@@ -13,3 +13,4 @@ Create a new theme for FTUNEWS.com
 - Đức (Developer)
 
 ## Duc has read this.
+## Duc has read this twice.
