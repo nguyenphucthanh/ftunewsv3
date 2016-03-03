@@ -17,3 +17,4 @@ function nextSlide() {
 	curSlide++;
 	s.style.transform = 'translateX(' + (curSlide*(-widSlide)-1) + 'px)';
 }
+

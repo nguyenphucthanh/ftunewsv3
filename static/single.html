@@ -8,17 +8,6 @@
 <script type="text/javascript" src="ftu-news.js"></script>
 
 
-<style>
-	#content {padding:0px;}
-	#content>div {margin-top:40px;padding:0px 0px 0px 0px;}
-	#content>div:first-child {width:64%; padding-left:3%;}
-	#content>div:last-child {width:27%; padding-left:3%; padding-right:3%;}
-	@media screen and (max-width: 768px) {
-		#content>div:first-child {width:100%; padding:0px;}
-		#content>div:last-child {width:100%; padding:0px;}
-	}	
-</style>
-
 </head>
 
 
@@ -51,14 +40,13 @@
         <div>vitamin biz</div>
         <div>search</div>
     </div>
-
-
-<script>
-	document.getElementById("menu-button").onclick = function() {
-		var t = document.getElementById("menu").style;
-		t.display = (t.display=="none") ? "block" : "none";		
-	}
-</script>
+    <script>
+		document.getElementById("menu-button").onclick = function() {
+			var t = document.getElementById("menu");
+			if (!t.classList.contains("menu-display")) t.classList.add("menu-display");
+				else t.classList.remove("menu-display");
+		}
+    </script>
 
 		<!----Logo----->
     <div id="logo" style="margin-top:30px; ">

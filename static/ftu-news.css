@@ -22,16 +22,29 @@
 	
 	/* The Top Menu */
 	#menu-title {text-align:center; padding:10px; display:none; background:white; font-size:30px;}
-	#menu-title:hover {cursor:pointer;}
 	#menu-title>div:last-child {float:right;}	
+	#menu-button:hover {cursor:pointer;}
+	#menu {display:block;}
 	#menu>div{ padding:10px 10px 0px 10px;}
+	#menu>div:last-child {float:right;}
 	#menu>div:hover {cursor:pointer}
-	@media screen and (max-width:768px) {
+	#menu.menu-display {display:block;}
+	@media screen and (max-width:800px) {
 		#menu {display:none;}
 		#menu>div {float:none; height:30px; padding-top:5px; border-top:dashed 1px silver;}
 		#menu-title {display:block;}
 		#logo {display:none;}
 	}
+	
+	/* Content of the post */
+	#content {padding:0px;}
+	#content>div {margin-top:40px;padding:0px 0px 0px 0px;}
+	#content>div:first-child {width:64%; padding-left:3%;}
+	#content>div:last-child {width:27%; padding-left:3%; padding-right:3%;}
+	@media screen and (max-width: 768px) {
+		#content>div:first-child {width:100%; padding:0px;}
+		#content>div:last-child {width:100%; padding:0px;}
+	}	
 	
 	
 	.main-container {float:left; width:822px; background:none;}
