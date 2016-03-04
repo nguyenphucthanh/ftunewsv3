@@ -14,7 +14,7 @@
 	.header>a {margin-left:13px;}
 	.header>a:last-child {margin-right:24px;}
 	
-	.page-width {margin:0px auto; /*width:80%;*/ max-width:1183px;}
+	.page-width {margin:0px auto; max-width:1183px;}
 	@media screen and (max-width:800px) {
 		.page-width { width:100%; }
 		.main {width:100%;}
@@ -32,6 +32,7 @@
 	@media screen and (max-width:800px) {
 		#menu {display:none;}
 		#menu>div {float:none; height:30px; padding-top:5px; border-top:dashed 1px silver;}
+		#menu>div:last-child {float:left;}
 		#menu-title {display:block;}
 		#logo {display:none;}
 	}
