@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>FTU NEWS</title>
-<link type="text/css" rel="stylesheet" href="ftu-news.css" />
+<link type="text/css" rel="stylesheet" href="css/ftu-news.css" />
 <style>
 	#home-ftunews {position:relative; top:0cm; left:50px; color:white; font-size:84px;}
 	#date-time {margin-left:82px;width:262px;height:262px;border-radius:4cm;border:solid 2px white;text-align:center;color:white;}
@@ -33,11 +33,6 @@
 		text-align:center;
 		border-radius: 100%;
 	}
-	#hot-event {}
-	#hot-event td {padding:0px 18px 0px 18px; font-size:15px; }
-	#hot-event tr>td:first-child {width:220px; }
-	#hot-event tr:nth-child(odd) {background:rgb(235,235,235);}
-	#hot-event tr {height:50px;}
 	input[type=range] {
 		-webkit-appearance: none;
 		height:24px;
@@ -168,125 +163,97 @@
 </div>
     
     
+<!-- MAIN -->
+<style>
+	.float-left>a {float:left}
+	#latest {margin-left:3%; width:67%; background:;}
+	#latest-frame>div {position:relative; margin-top:3px;}
+	#latest-frame>div>a {display:block;position:relative;height:150px;}
+	#latest-frame>div>a>div:first-child {position:absolute;width:100%;height:100%; overflow:hidden;}
+	#latest-frame>div>a>div:last-child {position:absolute;left:5px;bottom:10px;color:white;}
 
+	#hot {margin-left:3%; width:24%; background:#FF0033}
+	@media screen and (max-width: 768px) {
+		#upper>div {width:100%; margin:0px;}
+	}
+</style>
 <div class="page-width" style="position:relative;background-color:white;margin-top:-40px;">    
-    <!--- UPPER --->
-    <div id="upper" style="padding:20px 31px 0px 31px;">
-      	<div class="main-container">
-            <div class="main">           
-                <span style="background-color:red;color:white;border:solid 1px red;padding:0px 5px 0px 5px"><B>Mới nhất</B></span>
-                <span style="margin-left:3px;padding:0px 40px 0px 40px;width:5cm;text-align:center;border:solid 1px black;">Tất cả</span>
-                
-                <p>
-                    <strong>[AECitizen] Nhà tài trợ Bạc Youth Development Corporation (YDC)</strong><br />
-                    Anh ngữ Việt Mỹ VATC - Đồng hành cùng FTUGames 2015<br />
-                    K54 - Tân Vương của thể thao ngoại thương<br />
-                    [FTUGames 2015]Chung kết bóng đá - Lời kết hoàn mỹ cho mùa Games<br />
-                    Thanh Thảo<br />
-                    Phong vân<br />
-                    Bán kết bóng đá<br />
-                </p>
-                
-                <div style="color:white;padding-right:34px">
-                	<div style="position:relative;float:left;">
-                		<img src="Images/backward.png" />
-                        <div style="position:absolute;right:10px;top:0px; z-index:10">
-                        	Back
-                        </div>
-                    </div>
-                	<div style="position:relative;float:right;">
-                		<img src="Images/forward .png" />
-                        <div style="position:absolute;left:10px;top:0px;z-index:10">
-                        	Next
-                        </div>
-                    </div>
-                </div>
+  <!--- UPPER --->
+  <div id="upper" class="float-left">
+  	<div id="latest">
+    	<!-- latest head -->
+      <img src="Images/Moi-Nhat.png" width="408" height="48" /> 
+      <span style="margin-left:10px;padding:0px 16px 0px 16px;border:solid 1px black;position:relative;top:-5px;">TỪ FTUNEWS</span>
+      <br />
+      <div id="latest-frame">
+        <!-- row 1 -->
+        <div class="float-left" style="position:relative;">
+          <a href="" style="width:55%">
+            <div style="background-image:url(Images/BN-LX276_symrot_J_20151230142215.png);background-size:cover; background-position:center center">
+            	<div class="layer1" style=""></div>
             </div>
+            <div>Khi mua hàng chỉ cần nói: "Tôi trả bằng Google"</div>
+          </a>
+          <a href="" style="width:44%;margin-left:1%;">
+            <div >
+              <img src="Images/BN-LX298_symwil_J_20151230143515.jpg" width="100%" /> 
+            </div>
+            <div>A Sofofooooo Symboll blasdfasdfasfd  saf s sda fahcblahbcblsdhfa</div>
+          </a>
         </div>
-        <!------------------------->
-        <div class="aside">
-        	<div style="position:relative;border-left:solid 1px black; border-top:solid 1px black;color:black; margin-top:10px; padding-left:10px;">
-                <span style="position:absolute; background:white; top:-20px; left:-8px; padding-left:40px;padding-right:20px;">
-                    <b>BÀI VIẾT NỔI BẬT</b>
-                </span>                 
-                <ol class="custom-counter" style="">
-                	<li>Hoa hồng phải có gai</li>
-                    <li>Bánh Bánh Bánh nè</li>
-                    <li>Bánh Bánh Bánh nữa nè</li>
-                </ol>
-            	<div style="padding-left:18px;margin-top:94px;"><b>SỰ KIỆN NỔI BẬT</b></div>        
-                <table id="hot-event">
-                	<tr>
-                    	<td>
-                        	Xuân tình nguyện 2016
-                        </td>
-                        <td>
-                        	1/1/2016 - 30/1/2016
-                        </td>
-                    </tr>
-                    <tr>
-                    	<td>
-                        	SCMission 2016
-                        </td>
-                        <td>dd/mm/yy</td>
-                    </tr>
-                    <tr>
-                    	<td>
-                        	Young Innovators Forum 2016</td>
-                        <td>
-                        	dd/mm/yy
-                        </td>
-                    </tr>
-                </table>
-            </div>            
+        <!-- row 2 -->
+        <div class="float-left" style="position:relative;"> 
+          <a href="" style="width:37%">
+            <div >
+              <img src="Images/BN-LX276_symrot_J_20151230142215.png" width="100%" /> 
+            </div>
+            <div>Khi mua hàng chỉ cần nói: "Tôi trả bằng Google"</div>
+          </a>
+          <a href="" style="width:62%;margin-left:1%;">
+            <div >
+              <img src="Images/BN-LX298_symwil_J_20151230143515.jpg" width="100%" /> 
+            </div>
+            <div>A Sofofooooo Symboll blasdfasdfasfd  saf s sda fahcblahbcblsdhfa</div>
+          </a>
         </div>
-	</div>    
-    <div style="clear:both"></div>
-       
-    
+        <!-- row 3 -->
+        <div class="float-left" style="position:relative;"> 
+          <a href="" style="width:100%">
+            <div >
+              <img src="Images/BN-LX276_symrot_J_20151230142215.png" width="100%" /> 
+            </div>
+            <div>Xem truoc SYM Wolf 300 sap ra mat tai trien lam moto xe may Viet Nam</div>
+          </a>
+        </div>
+        <!-- row 4 -->
+        <div class="float-left" style="position:relative;"> 
+          <a href="" style="width:48%">
+            <div >
+              <img src="Images/BN-LX276_symrot_J_20151230142215.png" width="100%" /> 
+            </div>
+            <div>Thong tin thu vi co the ban chua biet ve alsdjflaflfkjd</div>
+          </a>
+          <a href="" style="width:51%;margin-left:1%;">
+            <div >
+              <img src="Images/BN-LX298_symwil_J_20151230143515.jpg" width="100%" /> 
+            </div>
+            <div>HTC ban duoc 15000 chiec kinh VIerer Pie sau 10 phut mo dat hang</div>
+          </a>
+        </div>       
         
-<script src="category-contain.js"></script>    
-    <!--- LOWER --->
-    <div id="lower" style="padding:0px 31px 0px 31px; margin-top:1cm;">
-      	<div class="main-container" >
-        <div class="main" style="height:100%; float:none; clear:both;">        
-        	<!--- Category: Ho Tro Sinh Vien --->
-        	<div class="cat-box"> 
-            	<div class="cat-tit-container" style="float:none;margin-right:1cm;">
-                    <div class="cat-tit"><b>điểm tin</b></div>
-                    <input type="range" onchange="sliderMove(this)" value="0" />
-                    <div style="float:right"><i>Xem thêm</i></div>                
-                    <div style="clear:both;"></div>
-                </div>
-                
-                <!---- Articles ---->
-                <div class="article-frame">
-                    <div class="article-container" >
-                        <script>writeArticles();</script>
-                    </div>         
-                </div>             			        
-                <div style="clear:both;"></div>
-            </div> 
-            <!------------------------>      
-        
-            
-        </div>
-      	</div>
-        <!------------------------>
-        <div class="aside">
-        	<img src="Images/ad.png" width="100%"/>
-        	<img src="Images/ad.png" width="100%" style="margin-top:20px;"/>
-        </div>
+			</div>    
+   	</div>
+    <div id="hot">
+    	bai viet noi bat
     </div>
-    <div style="clear:both; height:0; width:0"></div>	
+  </div>  
     
-    <div style="text-align:center;padding-top:6cm;padding-bottom:1cm;">
-    	<a href="#dautrang" target="_self"><img src="Images/End mark.png"/></a>
-    </div>
+  <!-- LOWER -->  
+</div>    
+
+
     
-</div>
-<div class="page-width" >
-    
+<div class="page-width" >   
     
     <!--- BOT MENU --->
     <div class="bot-menu" style="width:auto">
