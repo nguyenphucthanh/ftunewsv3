@@ -3,446 +3,330 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta charset="utf-8">
-    <title>Home Page</title>
+    <title>Details Page</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="slick/slick.css" rel="stylesheet">
     <link href="slick/slick-theme.css" rel="stylesheet">
     <link href="css/ftu-news.css" rel="stylesheet"/>
-    <link href="css/full-slider.css" rel="stylesheet"/>
-    <style>
-        .float-left>a {float:left}
-        #latest-frame>div {position:relative; margin-top:3px;}
-        #latest-frame>div>a {display:block;position:relative;height:150px;}
-        #latest-frame>div>a>div:first-child {position:absolute;width:100%;height:100%; overflow:hidden;}
-        #latest-frame>div>a>div:last-child {position:absolute;left:5px;bottom:10px;color:white;}
-
-
-    </style>
 </head>
 
-
 <body>
-<a name="dautrang"></a>
+    <!--- HEADER --->
+    <div class="header-bar" >
+        <header class="container" >
+            <span style="color:#DC6803">follow us on</span>
+            <a href="http://www.facebook.com">Facebook</a>
+            <a href="http://www.instagram.com">Instagram</a>
+            <a href="http://www.youtube.com">Youtube</a>
+        </header>
+    </div>
 
-<!--- HEADER --->
-<div class="header-bar" >
-    <header class="container" >
-        <span style="color:#DC6803">follow us on</span>
-        <a href="http://www.facebook.com">Facebook</a>
-        <a href="http://www.instagram.com">Instagram</a>
-        <a href="http://www.youtube.com">Youtube</a>
-    </header>
-</div>
+    <main class="container" style="background-color:white; ">
 
+        <!----- Menu ---->
+        <style>
+        @media (min-width: 768px) {
+            .navbar-nav > li > a {
+                padding-top: 15px;
+                padding-bottom: 0px;
+            }
+        }
+        </style>
+        <nav class="navbar navbar-default">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">FTUNEWS</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a class="navbar-item" href="#"><span>Điểm tin</span></a></li>
+                    <li><a class="navbar-item" href="#"><span>Chuyển động FTU2</span></a></li>
+                    <li><a class="navbar-item" href="#"><span>Phóng sự</span></a></li>
+                    <li><a class="navbar-item" href="#"><span>Hỗ trợ sinh viên</span></a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span>Cảm thức</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Cà phê thư</a></li>
+                            <li><a href="#">Trà đá thư</a></li>
+                            <li><a href="#">Hủ tiếu thư</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="navbar-item" href="#"><span>Vitamin biz</span></a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="navbar-item" href="#"><span>Search</span></a></li>
+                </ul>
+            </div>
+        </nav>
 
 <!--- big-pic --->
 <div id="big-pic" class="container-fluid" style="position:relative; overflow:hidden;">
     <!-- Background Pic -->
 
-    <div class="index-bigpic"></div>
-    <!-- Mask -->
-    <div class="layer1" style="width:100%;height:100%;opacity:0.3;background:black;"></div>
-    <div class="layer1" style="height:100%;" >
-        <div class="page-width" style="position:relative;height:100%;">
-            <!----- Menu ---->
-            <div id="menu-title" class="float-left">
-                <div id="menu-button">&#9776;</div>
-                <div>FTUNEWS</div>
+        <!----Logo----->
+        <div class="row">
+            <div style="font-size:500%" class="col-md-4">
+                FTUNEWS
             </div>
-            <div id="menu" class="float-left" style="color:white;">
-                <div>hỗ trợ sinh viên</div>
-                <div>điểm tin</div>
-                <div>chuyển động FTU2</div>
-                <div>phóng sự</div>
-                <div>cảm thức</div>
-                <div>vitamin biz</div>
-                <div>search</div>
-            </div>
-            <script>
-                document.getElementById("menu-button").onclick = function() {
-                    var t = document.getElementById("menu");
-                    if (!t.classList.contains("menu-display"))
-                        t.classList.add("menu-display");
-                    else
-                        t.classList.remove("menu-display");
-                }
-            </script>
+            <!---- Latest Slide ---->
+            <div class="col-md-8" style="padding:20px 30px 00px 20px;">
+              <div class="slick" style="">
+                  <div>
+                      <a href="#" class="media">
+                          <div class="media-left" >
+                              <img class="media-object" src="Images/BN-LX276_symrot_J_20151230142215.png" style="width:80px; height:80px; border-radius: 100%">
 
+                          </div>
+                          <div class="media-body">
+                              <div style="height:80px; overflow: hidden">
+                                  <h4 class="media-heading">1. Bản tin sinh viên</h4>
+                                  (AECitizen) Nhà tài trợ bạc Youth Development(AECitizen) Nhà tài trợ bạc Youth Development(AECitizen) Nhà tài trợ bạc Youth Development(AECitizen) Nhà tài trợ bạc Youth Development
+                              </div>
+                          </div>
+                      </a>
+                  </div>
+                  <div>
+                      <div class="media">
+                          <div class="media-left" >
+                              <img class="media-object" src="Images/BN-LX276_symrot_J_20151230142215.png" style="width:80px; height:80px; border-radius: 100%">
 
-            <!----- White Layer ------>
-            <div id="home-ftunews">FTU NEWS</div>
-            <script>
-                iDate = new Date();
-                aMonths = ["một","hai","ba","bốn","năm","sáu","bảy","tám","chín","mười","mười một","mười hai"]
-                ap = ["AM","PM"];
-            </script>
-            <!----- Date Time ----->
-            <div id="date-time" >
-                <div style="margin-top:40px;font-style:italic;font-size:20px">
-                    <script>
-                        var h = iDate.getHours(), m = iDate.getMinutes();
-                        document.write((h+11)%12+1 + ":" + m + " " + ap[parseInt(h/12)]);
-                    </script>
-                </div>
-                <hr style="margin-top:6px;width:66px;border:dotted 3px white;border-left:none;transform:skewX(-20deg);" />
-                <div style="margin:16px auto 00px;">
-                    <div style="display:inline-block;font-size:70px;line-height:60px;">
-                        <script>document.write(iDate.getDate());</script>
-                    </div>
-                    <div style="display:inline-block;text-align:left;font-size:34px;line-height:30px">
-                        tháng<br /><script>document.write(aMonths[iDate.getMonth()]);</script>
-                    </div>
-                    <div style="clear:both"></div>
-                </div>
-                <hr style="width:66px;border:dotted 3px white;border-left:none;transform:skewX(-20deg);margin:20px auto 00px;" />
-                <div style="margin-top:4px;font-style:italic;font-size:18px;">
-                    2016
-                </div>
-            </div>
-            <!----- Words ------->
-            <div style="position:absolute;right:1cm; bottom:4cm; color:white; ">
-                <H1 style="text-align:right">What to expect in 2016</H1>
-                Look for breakthroughs, comebacks and new solutions to <br />
-                familiar problems: 17 prominent thinkers on the big<br />
-                developments that they anticipate or hope for.
-            </div>
-            <div style="position:absolute; bottom:12px; width:100%; text-align:center;">
-                <img src="Images/Start mark.png" />
+                          </div>
+                          <div class="media-body">
+                              <div style="height:80px; overflow: hidden">
+                                  <h4 class="media-heading">2. Bản tin sinh viên</h4>
+                                  (AECitizen) Nhà tài trợ bạc Youth Development(AECitizen) Nhà tài trợ bạc Youth Development(AECitizen) Nhà tài trợ bạc Youth Development(AECitizen) Nhà tài trợ bạc Youth Development
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div>
+                      <div class="media">
+                          <div class="media-left" >
+                              <img class="media-object" src="Images/BN-LX276_symrot_J_20151230142215.png" style="width:80px; height:80px; border-radius: 100%">
+
+                          </div>
+                          <div class="media-body">
+                              <div style="height:80px; overflow: hidden">
+                                  <h4 class="media-heading">3. Bản tin sinh viên</h4>
+                                  (AECitizen) Nhà tài trợ bạc Youth Development(AECitizen) Nhà tài trợ bạc Youth Development(AECitizen) Nhà tài trợ bạc Youth Development(AECitizen) Nhà tài trợ bạc Youth Development
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div>
+                      <div class="media">
+                          <div class="media-left" >
+                              <img class="media-object" src="Images/BN-LX276_symrot_J_20151230142215.png" style="width:80px; height:80px; border-radius: 100%">
+
+                          </div>
+                          <div class="media-body">
+                              <div style="height:80px; overflow: hidden">
+                                  <h4 class="media-heading">1. Bản tin sinh viên</h4>
+                                  (AECitizen) Nhà tài trợ bạc Youth Development(AECitizen) Nhà tài trợ bạc Youth Development(AECitizen) Nhà tài trợ bạc Youth Development(AECitizen) Nhà tài trợ bạc Youth Development
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div>
+                      <div class="media">
+                          <div class="media-left" >
+                              <img class="media-object" src="Images/BN-LX276_symrot_J_20151230142215.png" style="width:80px; height:80px; border-radius: 100%">
+
+                          </div>
+                          <div class="media-body">
+                              <div style="height:80px; overflow: hidden">
+                                  <h4 class="media-heading">1. Bản tin sinh viên</h4>
+                                  (AECitizen) Nhà tài trợ bạc Youth Development(AECitizen) Nhà tài trợ bạc Youth Development(AECitizen) Nhà tài trợ bạc Youth Development(AECitizen) Nhà tài trợ bạc Youth Development
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div>
+                      <div class="media">
+                          <div class="media-left" >
+                              <img class="media-object" src="Images/BN-LX276_symrot_J_20151230142215.png" style="width:80px; height:80px; border-radius: 100%">
+
+                          </div>
+                          <div class="media-body">
+                              <div style="height:80px; overflow: hidden">
+                                  <h4 class="media-heading">1. Bản tin sinh viên</h4>
+                                  (AECitizen) Nhà tài trợ bạc Youth Development(AECitizen) Nhà tài trợ bạc Youth Development(AECitizen) Nhà tài trợ bạc Youth Development(AECitizen) Nhà tài trợ bạc Youth Development
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
             </div>
         </div>
-
-    </div>
-</div>
+        <!--------------->
 
 
-<!-- MAIN -->
-<main class="container" style="position:relative;background-color:white;margin-top:-40px; padding:00px 40px 00px 40px;">
+            <!--- Title --->
+            <div style="text-align:center; margin-top:55px;">CẢM THỨC | CAFE THƯ</div>
 
-    <!--- UPPER --->
-    <div class="row">
-        <div class="col-md-9">
-            <!-- latest head -->
-            <img src="Images/Moi-Nhat.png" width="408" height="48" />
-            <span style="padding:00px 16px 00px 16px;border:solid 1px black;position:relative;top:-5px;">TỪ FTUNEWS</span>
-            <br />
-            <div class="index-latest">
+        <div style="text-align:center">
+            <div style="font-size:60px;margin-top:26px;">LỠ (kỳ cuối)</div>
+          <div style="margin-top:40px;font-style:italic;font-size:14px">By QUỲNH HƯƠNG &nbsp; DEC, 30, 2015</div>
+          <div style="width:60%;margin:30px auto 00px;text-align:justify">
+            <i>"... Lã Chi thấy đâu có những vệt rối lại chăng lên, se đầy khắp suy nghĩ của nó về công việc. Nhưng từ cái ngày ấy, nó chẳng dám nhờ anh gỡ rối... Cho đến một ngày bong bóng cảm xúc vỡ tan, nó quyết định..."</i>
+           </div>
+        </div>
+
+
+        <!--- Content --->
+        <div id="content00" class="container" style="margin-top:20px;">
+            <article class="col-md-8">
+
+                <p style="margin-top: 00px">Phiên họp được điều hành bởi Chủ tịch nước Trương Tấn Sang, sau khi ông Lê Hồng Anh - Thường trực Ban Bí thư tuyên bố lý do cuộc họp, thủ tục xin ý kiến và thông qua chương trình phiên trù bị, quy chế làm việc của Đại hội.
+
+                <p>Trong phiên họp trù bị, đại biểu đã hoàn thành các phần việc, gồm: bầu Đoàn Chủ tịch, Đoàn thư ký, Ban thẩm tra tư cách đại biểu, thông qua chương trình làm việc, Quy chế bầu cử của Đại hội cũng như Báo cáo thẩm tra tư cách đại biểu.
+
+                <p>Quy chế bầu cử của Đại hội 12 không khác nhiệm kỳ trước. Ảnh minh hoạ: Nhật Minh
+                Đại hội đã thông qua quy chế bầu cử. Trước đó, nội dung này đã được hội nghị Trung ương 13, 14 thông qua.
+
+                <p>Theo đó, Ủy viên Trung ương Đảng khóa XI nếu không nằm trong danh sách tái cử sẽ không được ứng cử, đề cử và nhận đề cử. Tuy nhiên, những đại biểu còn lại của đại hội khóa XII vẫn có quyền quyết định đề cử nhân sự Ban chấp hành khóa mới.
+
+                <p><img src="Images/BN-LX259_symmoy_J_20151230140321 copy.jpg" style="width:100%"/>
+
+                <p>Ngoài nội dung nêu trên, phiên trù bị cũng bầu Đoàn Chủ tịch gồm 17 người trong đó có 16 ủy viên Bộ Chính trị và bà Hà Thị Khiết - người duy nhất 8 lần dự Đại hội Đảng.
+
+                <p>Thư ký đoàn có 5 người do Chánh văn phòng Trung ương Đảng Trần Quốc Vượng làm trưởng đoàn, có ông Phạm Minh Chính - Phó trưởng Ban tổ chức Trung ương; Tổng biên tập báo Nhân dân Thuận Hữu; Chủ nhiệm Ủy ban Các vấn đề xã hội Trương Thị Mai; Phó bí thư thường trực Thành ủy TP HCM Võ Văn Thưởng.
+
+                <p>Ban thẩm tra tư cách đại biểu do ông Ngô Văn Dụ, Chủ nhiệm Ủy ban Kiểm tra trung ương làm trưởng ban. Buổi chiều 20/1, các đoàn nghiên cứu tài liệu tại đoàn.
+
+                <p>Đại biểu tham dự Đại hội Đảng vào viếng lăng Chủ tịch Hồ Chí Minh sáng nay. Ảnh: Thanh Hải.
+                Theo kế hoạch, sáng 21/1 Đại hội sẽ khai mạc với sự điều hành của Thủ tướng Nguyễn Tấn Dũng, Chủ tịch nước Trương Tấn Sang phát biểu khai mạc. Thủ tướng sẽ mời Tổng bí thư lên đọc báo cáo chung của Ban chấp hành Trung ương Đảng khoá XI về các văn kiện. Báo cáo kiểm điểm sự lãnh đạo, chỉ đạo của Ban chấp hành Trung ương Đảng khoá XI sẽ do ông Lê Hồng Anh đọc.
+
+                <p>Chiều 21/1, các đại biểu họp đoàn thảo luận về văn kiện Đại hội. Sau đó trong 2 ngày 22-23/1, Đại hội sẽ thảo luận tại hội trường. Sáng 24/1, báo cáo nhân sự sẽ được công bố trước phần thảo luận, bầu nhân sự khoá mới.
+
+
+          </article>
+            <div class="col-md-4">
+                <div style="font-size:20px;"><b>RELATED</b></div>
+                <ul style="color:#FF9900;font-weight:bold;padding:00px 00px 00px 20px">
+                    <li>Take away - Chuyện những tách cà phê mang đi</li>
+                    <li>Bitches in Town - Nói qua nói lại có toại lòng nhau?</li>
+                    <li>Mạnh mẽ giữa Sài Gòn theo một cách rất dĩ nhiên</li>
+              </ul>
+              <hr style="border-top:dashed 1px black;"/>
+              <div style="color:rgb(27,147,233)"> <b>RECENT COMMENTS</b></div>
+              <div>
+                  <b>Trung NG</b> <i>19 minutes ago.</i><br />
+                  Hay quá má ơi, không biết nói gì luôn. Nói gì đi cho comment dài ra coi!!!!!
+              </div>
+              <div>
+                  <b>Trung NG</b> <i>19 minutes ago.</i><br />
+                  Hay quá má ơi, không biết nói gì luôn. Nói gì đi cho comment dài ra coi!!!!!
+              </div>
+              <div>
+                  <b>Trung NG</b> <i>19 minutes ago.</i><br />
+                  Hay quá má ơi, không biết nói gì luôn. Nói gì đi cho comment dài ra coi!!!!!
+              </div>
+
+              <hr style="border-top:dashed 1px black;"/>
+              <small style="color:rgb(27,147,233)"><b>SEE ALL COMMENT</b> &nbsp; <b>LEAVE A COMMENT</b></small>
+          </div>
+        </div>
+
+        <div style="text-align:center; padding-bottom:30px;">
+            <a href="#" target="_self"><img src="Images/to-top.png"/></a>
+        </div>
+    </main>
+
+
+    <div class="page-width">
+
+        <!------- Bottom Menu ---------->
+        <div class="container row">
+            <div class="col-md-10">
+                <div class="bot-menu-title">FTUNEWS</div>
                 <div class="row">
-                    <div class="col-md-8">
-                        <div class="index-latest-frame" style="background-image: url(Images/BN-LX298_symwil_J_20151230143515.jpg)">
-                            jfjalfjsajflkj<br>jfjalfjsajflkj<br>jfjalfjsajflkj<br>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="index-latest-frame" style="background-image: url(Images/BN-LX276_symrot_J_20151230142215.png)">
-                            jfjalfjsajflkj<br>jfjalfjsajflkj<br>jfjalfjsajflkj<br>
-                        </div>
-                    </div>
+                    <ul class="col-md-2">
+                        <b>điểm tin</b><br />
+                        bản tin sinh viên<br />
+                        tuyển sinh<br />
+                    </ul>
+                    <ul class="col-md-2">
+                        <b>chuyển động ftu2</b><br />
+                        FTUCharm 2016<br />
+                        người trẻ<br />
+                        FTUShine<br />
+                    </ul>
+                    <ul class="col-md-2">
+                        <b>phóng sự</b><br />
+                        phóng sự ảnh<br />
+                    </ul>
+                    <ul class="col-md-2">
+                        <b>hỗ trợ sinh viên</b><br />
+                        học bổng<br />
+                        nhà trọ<br />
+                        việc làm<br />
+                    </ul>
+                    <ul class="col-md-2">
+                        <b>cảm thức</b><br />
+                        cafe thư<br />
+                    </ul>
+                    <ul class="col-md-2">
+                        <b>vitamin biz</b><br />
+                        chuyện kinh doanh<br />
+                        menu giải trí<br />
+                    </ul>
+
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
-            <div>BÀI VIẾT NỔI BẬT</div>
-            <ul>
-                <li>TIn số 1 TIn số 1 TIn số 1 TIn số 1 TIn số 1 TIn số 1 TIn số 1 </li>
-                <li>TIn số 2 TIn số 1 TIn số 1 TIn số 1 TIn số 1 TIn số 1 TIn số 1 </li>
-                <li>TIn số 3 TIn số 1 TIn số 1 TIn số 1 TIn số 1 TIn số 1 TIn số 1 </li>
-            </ul>
-            <div>SỰ KIỆN NỔI BẬT</div>
-            <table class="table index-events">
-                <tr>
-                    <td>Xuân tình nguyện 2016</td>
-                    <td>1/1/2016-30/1/2016</td>
-                </tr>
-                <tr>
-                    <td>Event 2</td>
-                    <td>1/1/2016-30/1/2016</td>
-                </tr>
-                <tr>
-                    <td>Event 3</td>
-                    <td>1/1/2016-30/1/2016</td>
-                </tr>
-                <tr>
-                    <td>Event 4</td>
-                    <td>1/1/2016-30/1/2016</td>
-                </tr>
-                <tr>
-                    <td>Event 5</td>
-                    <td>1/1/2016-30/1/2016</td>
-                </tr>
-            </table>
+
+
+        <!--- follow us on FB --->
+        <div class="follow-us">
+            <div style="">
+                <div>follow us<br />on</div>
+                <div>Facebook</div>
+                <div>YouTube</div>
+                <div>Instagram</div>
+            </div>
         </div>
+        <!----------------------------->
+
+        <!--- FOOTER --->
+        <footer class="container">
+            <span>&copy; 2016 FTUNEWS</span>
+            <span><a href="">contact us</a></span>
+            <span><a href="">advertise</a></span>
+            <span><a href="">privacy</a></span>
+            <span><a href="">terms of services</a></span>
+            <span><a href="">site map</a></span>
+            <span><a href="">help</a></span>
+            <span><a href="">subscription</a></span>
+        </footer>
     </div>
 
-    <!-- LOWER -->
-    <div class="index-category">
-        <div class="row" style="background:none">
-            <div class="col-md-1">HỖ TRỢ<br>SINH VIÊN</div>
-            <div class="col-md-9"><input class="index-input-range" type="range"></div>
-            <div class="col-md-2">xem them</div>
-        </div>
-        <div class="row">
-            <div class="col-md-4 thumbnail">
-                <img src="Images/BN-LX276_symrot_J_20151230142215.png">
-                <div class="caption">
-                    <h3>This is the title of the post</h3>
-                    <p>
-                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-4 thumbnail">
-                <img src="Images/BN-LX276_symrot_J_20151230142215.png">
-                <div class="caption">
-                    <h3>This is the title of the post</h3>
-                    <p>
-                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-4 thumbnail">
-                <img src="Images/BN-LX276_symrot_J_20151230142215.png">
-                <div class="caption">
-                    <h3>This is the title of the post</h3>
-                    <p>
-                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="index-category" style="background: none;">
-        <div class="row" style="background:none;">
-            <div class="col-md-2">CHUYỂN ĐỘNG<br>NGOẠI THƯƠNG</div>
-            <div class="col-md-8"><input class="index-input-range" type="range"></div>
-            <div class="col-md-2">xem them</div>
-        </div>
-        <div class="row">
-            <div class="col-md-4 thumbnail">
-                <img src="Images/BN-LX276_symrot_J_20151230142215.png">
-                <div class="caption">
-                    <h3>This is the title of the post</h3>
-                    <p>
-                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-4 thumbnail">
-                <img src="Images/BN-LX276_symrot_J_20151230142215.png">
-                <div class="caption">
-                    <h3>This is the title of the post</h3>
-                    <p>
-                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-4 thumbnail">
-                <img src="Images/BN-LX276_symrot_J_20151230142215.png">
-                <div class="caption">
-                    <h3>This is the title of the post</h3>
-                    <p>
-                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="index-category">
-        <div class="row" style="background:none">
-            <div class="col-md-2">PHÓNG SỰ</div>
-            <div class="col-md-8"><input class="index-input-range" type="range"></div>
-            <div class="col-md-2">xem them</div>
-        </div>
-        <div class="row">
-            <div class="col-md-4 thumbnail">
-                <img src="Images/BN-LX276_symrot_J_20151230142215.png">
-                <div class="caption">
-                    <h3>This is the title of the post</h3>
-                    <p>
-                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-4 thumbnail">
-                <img src="Images/BN-LX276_symrot_J_20151230142215.png">
-                <div class="caption">
-                    <h3>This is the title of the post</h3>
-                    <p>
-                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-4 thumbnail">
-                <img src="Images/BN-LX276_symrot_J_20151230142215.png">
-                <div class="caption">
-                    <h3>This is the title of the post</h3>
-                    <p>
-                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div class="index-category">
-        <div class="row" style="background:none">
-            <div class="col-md-1">ĐIỂM TIN</div>
-            <div class="col-md-9"><input class="index-input-range" type="range"></div>
-            <div class="col-md-2">xem them</div>
-        </div>
-        <div class="row">
-            <div class="col-md-4 thumbnail">
-                <img src="Images/BN-LX276_symrot_J_20151230142215.png">
-                <div class="caption">
-                    <h3>This is the title of the post</h3>
-                    <p>
-                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-4 thumbnail">
-                <img src="Images/BN-LX276_symrot_J_20151230142215.png">
-                <div class="caption">
-                    <h3>This is the title of the post</h3>
-                    <p>
-                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-4 thumbnail">
-                <img src="Images/BN-LX276_symrot_J_20151230142215.png">
-                <div class="caption">
-                    <h3>This is the title of the post</h3>
-                    <p>
-                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="index-category">
-        <div class="row" style="background:none">
-            <div class="col-md-2">CẢM THỨC</div>
-            <div class="col-md-8"><input class="index-input-range" type="range"></div>
-            <div class="col-md-2">xem them</div>
-        </div>
-        <div class="row">
-            <div class="col-md-4 thumbnail">
-                <img src="Images/BN-LX276_symrot_J_20151230142215.png">
-                <div class="caption">
-                    <h3>This is the title of the post</h3>
-                    <p>
-                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-4 thumbnail">
-                <img src="Images/BN-LX276_symrot_J_20151230142215.png">
-                <div class="caption">
-                    <h3>This is the title of the post</h3>
-                    <p>
-                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-4 thumbnail">
-                <img src="Images/BN-LX276_symrot_J_20151230142215.png">
-                <div class="caption">
-                    <h3>This is the title of the post</h3>
-                    <p>
-                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-</main>
-
-
-
-<div class="page-width" >
-
-    <!--- BOT MENU --->
-    <div class="bot-menu" style="width:auto">
-        <div class="bot-menu-title">FTUNEWS</div>
-        <div>
-            <b>điểm tin</b><br />
-            bản tin sinh viên<br />
-            tuyển sinh<br />
-        </div>
-        <div>
-            <b>chuyển động ftu2</b><br />
-            FTUCharm 2016<br />
-            người trẻ<br />
-            FTUShine<br />
-        </div>
-        <div>
-            <b>phóng sự</b><br />
-            phóng sự ảnh<br />
-        </div>
-        <div>
-            <b>hỗ trợ sinh viên</b><br />
-            học bổng<br />
-            nhà trọ<br />
-            việc làm<br />
-        </div>
-        <div>
-            <b>cảm thức</b><br />
-            cafe thư<br />
-        </div>
-        <div>
-            <b>vitamin biz</b><br />
-            chuyện kinh doanh<br />
-            menu giải trí<br />
-        </div>
-    </div>
-    <div style="clear:both;"></div>
-
-
-    <!--- follow us on FB --->
-    <div class="follow-us">
-        <div style="">
-            <div>follow us<br />on</div>
-            <div>Facebook<br />YouTube</div>
-        </div>
-    </div>
-    <!----------------------------->
-
-
-    <!--- FOOTER --->
-    <div class="footer">
-        <div>&copy; 2016 FTUNEWS</div>
-        <div>contact us</div>
-        <div>advertise</div>
-        <div>privacy</div>
-        <div style="margin-right:2cm;">terms of services</div>
-        <div>site map</div>
-        <div>help</div>
-        <div>subscription</div>
-    </div>
-    <div style="clear:both; height:0; width:0"></div>
 
     <script type="text/javascript" src="js/ftu-news.js"></script>
     <script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="slick/slick.min.js" ></script>
     <script>
-        var heiPic = 0;
-        function setHeight() {
-            heiPic = window.innerHeight-30;
-            document.getElementById("big-pic").style.height = heiPic+"px";
-        }
-        window.onload = setHeight;
-        window.onresize = setHeight;
-    </script>
-</div>
+        $(document).ready(function(){
+            $('.slick').slick({
+                infinite: false,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                prevArrow: "<img class='slick-prev' src='Images/arrow-short.png' style=\"width:10px;height:20px\">",
+                nextArrow: "<img class='slick-next' src='Images/arrow-short.png' style=\"width:10px;height:20px;transform:rotate(180deg)\">"
+            });
+            $('ul.nav li.dropdown').hover(function() {
+                $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+            }, function() {
+                $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+            });
+        });
 
+
+    </script>
 </body>
 </html>

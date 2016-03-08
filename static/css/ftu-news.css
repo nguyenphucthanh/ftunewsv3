@@ -163,9 +163,11 @@
 	}
 	.index-bigpic {
 		overflow:hidden;
+		margin:00px;
+		padding:00px;
 		width:100%;
 		height:100%;
-		background-image:url(../Images/Yax-from-Zootopia.jpg);
+		background-image: url(../Images/Yax-from-Zootopia.jpg);
 		background-size:cover;
 		background-position:center;
 	}
@@ -176,5 +178,83 @@
 		background-size:cover;
 		background-position: center;
 		color: white;
-		margin: 0px;
+		margin: 3px;
+		position: relative;
+		display:block;
+	}
+	.index-latest-frame .index-latest-content {
+		position:absolute;
+		left:10px;
+		bottom:10px;
+	}
+
+	.index-time {
+		margin-top:50px;;
+		font-style:italic;
+		font-size:20px
+	}
+	.index-dat {
+		font-size:70px;
+		line-height:56px;
+		text-align:right;
+		padding-right:10px;
+	}
+	.index-month {
+		text-align:left;
+		font-size:34px;
+		line-height:30px;
+		padding:00px
+	}
+	.index-year {
+		font-style:italic;
+		font-size:18px;
+	}
+	.index-datetime-hr {
+		width:66px;
+		border:dotted 3px white;
+		border-left:none;
+		transform:skewX(-20deg);
+		margin:10px auto 10px;
+	}
+	.index-hot-posts {
+		padding:00px;
+	}
+	.index-hot-posts li {
+		position:relative;
+		height:60px;
+		overflow: hidden;
+	}
+	.index-hot-posts-content {
+		position: absolute;
+		top:00px; left:00px;
+	}
+	.background-number {
+		position:absolute;
+		top:00px; left:00px;
+		font-weight:bold;
+		font-size:60px;
+		line-height:50px;
+		text-align:center;
+		width:100%;
+		color:rgb(208,219,225);
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+	.no-padding {
+		padding:0px;
+	}
+
+	.gradient-cyan {
+		background: rgba(28,188,180,1); /* For browsers that do not support gradients */
+		background: -webkit-linear-gradient(left,  rgba(28,188,180,1),  rgba(0,0,0,0)); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient(right,  rgba(28,188,180,1),  rgba(0,0,0,0)); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(right,  rgba(28,188,180,1),  rgba(0,0,0,0)); /* For Firefox 3.6 to 15 */
+		background: linear-gradient(to right,  rgba(28,188,180,1),  rgba(0,0,0,0)); /* Standard syntax */
+	}
+	.mask {
+		position: absolute;
+		top:0px; left:0px;
+		width:100%; height:100%;
 	}
