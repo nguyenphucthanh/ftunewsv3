@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Home Page</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="slick/slick.css" rel="stylesheet">
+    <link href="slick/slick-theme.css" rel="stylesheet">
+    <link href="css/ftu-news.css" rel="stylesheet"/>
+    <link href="css/full-slider.css" rel="stylesheet"/>
+    <style>
+        .float-left>a {float:left}
+        #latest-frame>div {position:relative; margin-top:3px;}
+        #latest-frame>div>a {display:block;position:relative;height:150px;}
+        #latest-frame>div>a>div:first-child {position:absolute;width:100%;height:100%; overflow:hidden;}
+        #latest-frame>div>a>div:last-child {position:absolute;left:5px;bottom:10px;color:white;}
+
+
+    </style>
+</head>
+
+
+<body>
+<a name="dautrang"></a>
+
+  <!--- HEADER --->
+    <div class="header-bar" >
+        <header class="container" >
+            <span style="color:#DC6803">follow us on</span>
+            <a href="http://www.facebook.com">Facebook</a>
+            <a href="http://www.instagram.com">Instagram</a>
+            <a href="http://www.youtube.com">Youtube</a>
+        </header>
+    </div>
+
+
+<!--- big-pic --->
+<div id="big-pic" class="container-fluid" style="position:relative; overflow:hidden;">
+  <!-- Background Pic -->
+  
+  <div class="index-bigpic"></div>
+ 	<!-- Mask -->
+  <div class="layer1" style="width:100%;height:100%;opacity:0.3;background:black;"></div>
+  <div class="layer1" style="height:100%;" >
+    <div class="page-width" style="position:relative;height:100%;">
+      <!----- Menu ---->
+      <div id="menu-title" class="float-left">
+        <div id="menu-button">&#9776;</div>
+        <div>FTUNEWS</div>
+      </div>
+      <div id="menu" class="float-left" style="color:white;">
+          <div>hỗ trợ sinh viên</div>
+          <div>điểm tin</div>
+          <div>chuyển động FTU2</div>
+          <div>phóng sự</div>
+          <div>cảm thức</div>
+          <div>vitamin biz</div>
+          <div>search</div>
+      </div>
+      <script>
+        document.getElementById("menu-button").onclick = function() {
+            var t = document.getElementById("menu");
+            if (!t.classList.contains("menu-display"))
+                t.classList.add("menu-display");
+            else
+                t.classList.remove("menu-display");
+        }
+      </script>
+
+
+      <!----- White Layer ------>
+      <div id="home-ftunews">FTU NEWS</div>
+      <script>
+        iDate = new Date();
+        aMonths = ["một","hai","ba","bốn","năm","sáu","bảy","tám","chín","mười","mười một","mười hai"]
+        ap = ["AM","PM"]; 
+      </script>         
+      <!----- Date Time ----->   
+      <div id="date-time" >
+        <div style="margin-top:40px;font-style:italic;font-size:20px">
+          <script>
+            var h = iDate.getHours(), m = iDate.getMinutes();
+            document.write((h+11)%12+1 + ":" + m + " " + ap[parseInt(h/12)]);					
+          </script>
+        </div>
+        <hr style="margin-top:6px;width:66px;border:dotted 3px white;border-left:none;transform:skewX(-20deg);" />
+        <div style="margin:16px auto 00px;">
+              <div style="display:inline-block;font-size:70px;line-height:60px;">
+                <script>document.write(iDate.getDate());</script>
+              </div>
+              <div style="display:inline-block;text-align:left;font-size:34px;line-height:30px">
+                tháng<br /><script>document.write(aMonths[iDate.getMonth()]);</script>
+              </div>
+            <div style="clear:both"></div>
+        </div>
+        <hr style="width:66px;border:dotted 3px white;border-left:none;transform:skewX(-20deg);margin:20px auto 00px;" />
+        <div style="margin-top:4px;font-style:italic;font-size:18px;">
+          2016
+        </div>
+      </div>
+      <!----- Words ------->
+      <div style="position:absolute;right:1cm; bottom:4cm; color:white; ">
+        <H1 style="text-align:right">What to expect in 2016</H1>
+        Look for breakthroughs, comebacks and new solutions to <br />
+        familiar problems: 17 prominent thinkers on the big<br />
+        developments that they anticipate or hope for.
+      </div>
+      <div style="position:absolute; bottom:12px; width:100%; text-align:center;">
+          <img src="Images/Start mark.png" />    
+      </div> 
+    </div>
+    
+  </div>        
+</div>
+    
+    
+<!-- MAIN -->
+<main class="container" style="position:relative;background-color:white;margin-top:-40px; padding:00px 40px 00px 40px;">
+
+  <!--- UPPER --->
+    <div class="row">
+        <div class="col-md-9">
+            <!-- latest head -->
+            <img src="Images/Moi-Nhat.png" width="408" height="48" />
+            <span style="padding:00px 16px 00px 16px;border:solid 1px black;position:relative;top:-5px;">TỪ FTUNEWS</span>
+            <br />
+            <div class="index-latest">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="index-latest-frame" style="background-image: url(Images/BN-LX298_symwil_J_20151230143515.jpg)">
+                            jfjalfjsajflkj<br>jfjalfjsajflkj<br>jfjalfjsajflkj<br>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="index-latest-frame" style="background-image: url(Images/BN-LX276_symrot_J_20151230142215.png)">
+                            jfjalfjsajflkj<br>jfjalfjsajflkj<br>jfjalfjsajflkj<br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div>BÀI VIẾT NỔI BẬT</div>
+            <ul>
+                <li>TIn số 1 TIn số 1 TIn số 1 TIn số 1 TIn số 1 TIn số 1 TIn số 1 </li>
+                <li>TIn số 2 TIn số 1 TIn số 1 TIn số 1 TIn số 1 TIn số 1 TIn số 1 </li>
+                <li>TIn số 3 TIn số 1 TIn số 1 TIn số 1 TIn số 1 TIn số 1 TIn số 1 </li>
+            </ul>
+            <div>SỰ KIỆN NỔI BẬT</div>
+            <table class="table index-events">
+                <tr>
+                    <td>Xuân tình nguyện 2016</td>
+                    <td>1/1/2016-30/1/2016</td>
+                </tr>
+                <tr>
+                    <td>Event 2</td>
+                    <td>1/1/2016-30/1/2016</td>
+                </tr>
+                <tr>
+                    <td>Event 3</td>
+                    <td>1/1/2016-30/1/2016</td>
+                </tr>
+                <tr>
+                    <td>Event 4</td>
+                    <td>1/1/2016-30/1/2016</td>
+                </tr>
+                <tr>
+                    <td>Event 5</td>
+                    <td>1/1/2016-30/1/2016</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+    <!-- LOWER -->
+    <div class="index-category">
+        <div class="row" style="background:none">
+            <div class="col-md-1">HỖ TRỢ<br>SINH VIÊN</div>
+            <div class="col-md-9"><input class="index-input-range" type="range"></div>
+            <div class="col-md-2">xem them</div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 thumbnail">
+                <img src="Images/BN-LX276_symrot_J_20151230142215.png">
+                <div class="caption">
+                    <h3>This is the title of the post</h3>
+                    <p>
+                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4 thumbnail">
+                <img src="Images/BN-LX276_symrot_J_20151230142215.png">
+                <div class="caption">
+                    <h3>This is the title of the post</h3>
+                    <p>
+                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4 thumbnail">
+                <img src="Images/BN-LX276_symrot_J_20151230142215.png">
+                <div class="caption">
+                    <h3>This is the title of the post</h3>
+                    <p>
+                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="index-category" style="background: none;">
+        <div class="row" style="background:none;">
+            <div class="col-md-2">CHUYỂN ĐỘNG<br>NGOẠI THƯƠNG</div>
+            <div class="col-md-8"><input class="index-input-range" type="range"></div>
+            <div class="col-md-2">xem them</div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 thumbnail">
+                <img src="Images/BN-LX276_symrot_J_20151230142215.png">
+                <div class="caption">
+                    <h3>This is the title of the post</h3>
+                    <p>
+                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4 thumbnail">
+                <img src="Images/BN-LX276_symrot_J_20151230142215.png">
+                <div class="caption">
+                    <h3>This is the title of the post</h3>
+                    <p>
+                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4 thumbnail">
+                <img src="Images/BN-LX276_symrot_J_20151230142215.png">
+                <div class="caption">
+                    <h3>This is the title of the post</h3>
+                    <p>
+                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="index-category">
+        <div class="row" style="background:none">
+            <div class="col-md-2">PHÓNG SỰ</div>
+            <div class="col-md-8"><input class="index-input-range" type="range"></div>
+            <div class="col-md-2">xem them</div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 thumbnail">
+                <img src="Images/BN-LX276_symrot_J_20151230142215.png">
+                <div class="caption">
+                    <h3>This is the title of the post</h3>
+                    <p>
+                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4 thumbnail">
+                <img src="Images/BN-LX276_symrot_J_20151230142215.png">
+                <div class="caption">
+                    <h3>This is the title of the post</h3>
+                    <p>
+                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4 thumbnail">
+                <img src="Images/BN-LX276_symrot_J_20151230142215.png">
+                <div class="caption">
+                    <h3>This is the title of the post</h3>
+                    <p>
+                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="index-category">
+        <div class="row" style="background:none">
+            <div class="col-md-1">ĐIỂM TIN</div>
+            <div class="col-md-9"><input class="index-input-range" type="range"></div>
+            <div class="col-md-2">xem them</div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 thumbnail">
+                <img src="Images/BN-LX276_symrot_J_20151230142215.png">
+                <div class="caption">
+                    <h3>This is the title of the post</h3>
+                    <p>
+                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4 thumbnail">
+                <img src="Images/BN-LX276_symrot_J_20151230142215.png">
+                <div class="caption">
+                    <h3>This is the title of the post</h3>
+                    <p>
+                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4 thumbnail">
+                <img src="Images/BN-LX276_symrot_J_20151230142215.png">
+                <div class="caption">
+                    <h3>This is the title of the post</h3>
+                    <p>
+                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="index-category">
+        <div class="row" style="background:none">
+            <div class="col-md-2">CẢM THỨC</div>
+            <div class="col-md-8"><input class="index-input-range" type="range"></div>
+            <div class="col-md-2">xem them</div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 thumbnail">
+                <img src="Images/BN-LX276_symrot_J_20151230142215.png">
+                <div class="caption">
+                    <h3>This is the title of the post</h3>
+                    <p>
+                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4 thumbnail">
+                <img src="Images/BN-LX276_symrot_J_20151230142215.png">
+                <div class="caption">
+                    <h3>This is the title of the post</h3>
+                    <p>
+                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4 thumbnail">
+                <img src="Images/BN-LX276_symrot_J_20151230142215.png">
+                <div class="caption">
+                    <h3>This is the title of the post</h3>
+                    <p>
+                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</main>
+
+
+    
+<div class="page-width" >   
+    
+    <!--- BOT MENU --->
+    <div class="bot-menu" style="width:auto">
+	    <div class="bot-menu-title">FTUNEWS</div>
+        <div>
+            <b>điểm tin</b><br />
+            bản tin sinh viên<br />
+            tuyển sinh<br />			
+        </div>
+        <div>
+            <b>chuyển động ftu2</b><br />
+            FTUCharm 2016<br />
+            người trẻ<br />
+            FTUShine<br />
+        </div>
+        <div>
+            <b>phóng sự</b><br />
+            phóng sự ảnh<br />
+        </div>
+        <div>
+            <b>hỗ trợ sinh viên</b><br />
+            học bổng<br />
+            nhà trọ<br />
+            việc làm<br />
+        </div>
+        <div>
+            <b>cảm thức</b><br />
+            cafe thư<br />
+        </div>
+        <div>
+            <b>vitamin biz</b><br />
+            chuyện kinh doanh<br />
+            menu giải trí<br />
+        </div>
+    </div>
+    <div style="clear:both;"></div>    
+    
+    
+    <!--- follow us on FB --->
+    <div class="follow-us">
+        <div style="">
+        	<div>follow us<br />on</div>
+            <div>Facebook<br />YouTube</div>
+        </div>
+    </div>
+    <!----------------------------->
+    
+    
+    <!--- FOOTER --->
+    <div class="footer">
+    	<div>&copy; 2016 FTUNEWS</div>
+        <div>contact us</div>
+        <div>advertise</div>
+        <div>privacy</div>
+        <div style="margin-right:2cm;">terms of services</div>
+        <div>site map</div>
+        <div>help</div>
+        <div>subscription</div>
+  	</div>
+    <div style="clear:both; height:0; width:0"></div>
+    
+		<script type="text/javascript" src="js/ftu-news.js"></script>
+    <script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+			var heiPic = 0;
+			function setHeight() {
+				heiPic = window.innerHeight-30;
+				document.getElementById("big-pic").style.height = heiPic+"px";
+			}
+			window.onload = setHeight;
+			window.onresize = setHeight;		
+    </script>
+</div>
+
+</body>
+</html>

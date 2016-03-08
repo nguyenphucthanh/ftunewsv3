@@ -1,6 +1,6 @@
 @charset "utf-8";
 	
-	body {background-color:rgb(242,242,242); margin:0px; font-family:UTM Avo; }	
+	body {background-color:rgb(242,242,242); margin:00px; font-family:UTM Avo; }	
 	a {text-decoration:none; color:inherit;}
 	nav.navbar-default {background: none; border:none; }
 	footer span {margin-right:20px;}
@@ -15,18 +15,20 @@
 	header>a {margin-left:13px;}
 	header>a:last-child {margin-right:24px;}
 	
-	.page-width {margin:0px auto; max-width:1183px;}
+	.page-width {margin:00px auto; max-width:1183px;}
 	@media screen and (max-width:800px) {
 		.page-width { width:100%; }
 		.main {width:100%;}
 	}
+	
+	
 	
 	/* The Top Menu */
 	#menu-title {text-align:center; padding:10px; display:none; background:white; font-size:30px;}
 	#menu-title>div:last-child {float:right;}	
 	#menu-button:hover {cursor:pointer;}
 	#menu {display:block;}
-	#menu>div{ padding:10px 10px 0px 10px;}
+	#menu>div{ padding:10px 10px 00px 10px;}
 	#menu>div:last-child {float:right;}
 	#menu>div:hover {cursor:pointer}
 	#menu.menu-display {display:block;}
@@ -40,34 +42,34 @@
 	
 	/* Content of the post */
 	/*
-	#content {padding:0px;}
-	#content>div {margin-top:40px;padding:0px 0px 0px 0px;}
+	#content {padding:00px;}
+	#content>div {margin-top:40px;padding:00px 00px 00px 00px;}
 	#content>div:first-child {width:64%; padding-left:3%;}
 	#content>div:last-child {width:27%; padding-left:3%; padding-right:3%;}
 	@media screen and (max-width: 768px) {
-		#content>div:first-child {width:100%; padding:0px;}
-		#content>div:last-child {width:100%; padding:0px;}
+		#content>div:first-child {width:100%; padding:00px;}
+		#content>div:last-child {width:100%; padding:00px;}
 	}	
 	*/
 	
 	.main-container {float:left; width:822px; background:none;}
 	.main {}
 
-	.aside {float:left;width:288px; background:;}
+	.aside {float:left;width:288px;}
 
 	.bot-menu{clear:both;}
 	.clear-float{ clear:both; }
-	.layer1 {position:absolute; top:0px; left:0px; width:100%; height:100%;}
+	.layer1 {position:absolute; top:00px; left:00px; width:100%; height:100%;}
 	
 	.cat-box {margin-bottom:32px; width:100%;}
 	.cat-tit-container>div {float:left;}
 	.cat-tit-container>div:nth-child(1) {color:white; font-weight:bold; line-height:26px; height:28px; text-transform:uppercase;}
 	.cat-tit-container>div:nth-child(3) {color:#DC6803;} /* Xem them */
-	.cat-tit {background:#FF6600;padding:0px 5px 0px 5px;margin-right:10px;font-size:15px;line-height:28px;}
+	.cat-tit {background:#FF6600;padding:00px 5px 00px 5px;margin-right:10px;font-size:15px;line-height:28px;}
 	.article-frame{overflow:hidden;height:254px;max-width:790px;}
 	.article-container{width:100cm;transform:translateX(0px);transition-duration:0.5s;}
 	.article-container>div{float:left;margin-top:12px;width:245px;margin-right:20px; }
-	.article-container>div:first-child {margin-left:0px;}
+	.article-container>div:first-child {margin-left:00px;}
 	.article>img {width:100%; height:140px;}
 	.article>div {width:100%;}
 	
@@ -83,13 +85,96 @@
 	#slides-box>div:nth-child(odd):hover {cursor:pointer;opacity:0.5;}
 	#slides-frame {width:706px;overflow:hidden;}
 	#slides-container {height:100%; font-size:15px; line-height:18px; transition-duration:0.5s;}
-	#slides-container>div {float:left;border-left:solid 1px black;padding:0px 10px 0px 10px;}
-	#slides-container>div:first-child {border-left:solid 0px black;}
+	#slides-container>div {float:left;border-left:solid 1px black;padding:00px 10px 00px 10px;}
+	#slides-container>div:first-child {border-left:solid 00px black;}
 	#slides-container>div>div {display:inline-block;width:139px;height:70px; overflow:hidden;}
 	#slides-container>div>div>div {font-size:12px; text-transform:uppercase;}
 	#slides-container>div>img {width:70px;height:70px;border-radius:100%;overflow:hidden;}
 	/* follow us on Facebook */	
-	.follow-us {float:none;text-align:center; margin:36px 0px 40px 0px;}
-	.follow-us>div {border-radius:100%;border:solid 1px black; margin:0px auto; height:190px;width:190px;}
+	.follow-us {float:none;text-align:center; margin:36px 00px 40px 00px;}
+	.follow-us>div {border-radius:100%;border:solid 1px black; margin:00px auto; height:190px;width:190px;}
 	.follow-us>div>div:first-child {margin-top:54px;font-size:28px; line-height:20px;}
 	.follow-us>div>div:last-child {font-weight:bold;font-size:18px; line-height:20px; margin-top:12px;}
+	
+	
+	
+	#home-ftunews {position:relative; top:00cm; left:50px; color:white; font-size:84px;}
+	#date-time {margin-left:82px;width:262px;height:262px;border-radius:4cm;border:solid 2px white;text-align:center;color:white;}
+	#menu-title {text-align:center; padding:10px; display:none; background:none; color:white; font-size:30px;}
+	@media screen and (max-width:800px) {
+		#menu-title {display:block;}
+		#home-ftunews {display:none;}
+		#date-time {display:none;}
+	}
+	.custom-counter {
+		margin-left: 20px;
+		margin-right: 00px;
+		list-style-type: none;
+		padding-left:00px;
+	}
+	.custom-counter li {
+		counter-increment: step-counter;
+		margin-top:20px;
+	}
+	.custom-counter li::before {
+		content: counter(step-counter);
+		margin-right: 16px;
+		font-size: 18px;
+		background-color: red; color: white;
+		font-weight: bold;
+		padding:2px 11px 4px; line-height:00px;
+		text-align:center;
+		border-radius: 100%;
+	}
+
+/* input range */
+	.index-input-range {
+		-webkit-appearance: none;
+		height:24px;
+		width:280px;
+	}
+	.index-input-range:focus {
+		outline: none;
+	}
+	.index-input-range::-webkit-slider-runnable-track {
+		width: 100%;/**/
+		height: 1px;
+		cursor: pointer;
+		background: black;
+	}
+	.index-input-range::-webkit-slider-thumb {
+		border: 1px solid #000000;
+		height: 22px;
+		width: 22px;
+		border-radius: 100%;
+		background: #ffffff;
+		cursor: pointer;
+		margin-top:-10px;
+		-webkit-appearance: none;
+	}
+
+	.index-events tr:nth-child(odd) {
+		background:black;
+		color:white;
+	}
+	.index-events tr:nth-child(even) {
+		background:white;
+		color:black;
+	}
+	.index-bigpic {
+		overflow:hidden;
+		width:100%;
+		height:100%;
+		background-image:url(../Images/Yax-from-Zootopia.jpg);
+		background-size:cover;
+		background-position:center;
+	}
+
+	.index-latest-frame {
+		height:140px;
+		-webkit-background-size:cover;
+		background-size:cover;
+		background-position: center;
+		color: white;
+		margin: 0px;
+	}
