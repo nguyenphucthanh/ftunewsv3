@@ -1,20 +1,28 @@
 // JavaScript Document
-var curSlide, nSlide, widSlide;
-window.onload = function() {
-	curSlide = 0;
-	nSlide = 5;
-	widSlide = document.getElementById("slides-container").getElementsByTagName("div").item(0).clientWidth+1;
-}
-function prevSlide() {
-	if (curSlide==0) return;
-	var s = document.getElementById("slides-container");
-	curSlide--;
-	s.style.transform = 'translateX(' + curSlide*(-widSlide) + 'px)';
-}
-function nextSlide() {
-	if (curSlide+1==nSlide) return;
-	var s = document.getElementById("slides-container");
-	curSlide++;
-	s.style.transform = 'translateX(' + (curSlide*(-widSlide)-1) + 'px)';
-}
 
+var heiPic = 0;
+function setHeight() {
+	heiPic = window.innerHeight-30;
+	document.getElementById("big-pic").style.height = heiPic+"px";
+}
+window.onload = setHeight;
+window.onresize = setHeight;
+
+var Hou, Min, AP, Dat, Mon, Yea;
+var aMon = ["một","hai","ba","bốn","năm","sáu","bảy","tám","chín","mười","mười một","mười hai"];
+function updateTime() {
+	$('.index-time').innerHTML = Hou + " : " + Min + " " + AP;
+	$('.index-dat').innerHTML = Dat;
+	$('.index-month').innerHTML = "tháng<br>"+aMon[Mon];
+	$('.index-year').innerHTML = Yea;
+}
+updateTime();
+setInterval(updateTime, 1000);
+
+// menu effects
+$('.ShowSideMenu').click(function() {
+	$('.index-sidemenu').css('transform', 'translateX(0px)');
+});
+$('.HideSideMenu').click(function() {
+	$('.index-sidemenu').css('transform', 'translateX(-256px)');
+});

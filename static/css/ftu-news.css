@@ -2,6 +2,8 @@
 	
 	body {background-color:rgb(242,242,242); margin:00px; font-family:UTM Avo; }	
 	a {text-decoration:none; color:inherit;}
+	a:hover {text-decoration:none; color:silver}
+
 	nav.navbar-default {background: none; border:none; }
 	footer span {margin-right:20px;}
 	footer {margin-bottom:10px;}
@@ -23,7 +25,7 @@
 	
 	
 	
-	/* The Top Menu */
+	/* The Top Menu
 	#menu-title {text-align:center; padding:10px; display:none; background:white; font-size:30px;}
 	#menu-title>div:last-child {float:right;}	
 	#menu-button:hover {cursor:pointer;}
@@ -38,7 +40,7 @@
 		#menu>div:last-child {float:left;}
 		#menu-title {display:block;}
 		#logo {display:none;}
-	}
+	}*/
 	
 	/* Content of the post */
 	/*
@@ -113,7 +115,7 @@
 	}
 	
 	
-	#home-ftunews {position:relative; top:00cm; left:50px; color:white; font-size:84px;}
+
 	#date-time {margin-left:82px;width:262px;height:262px;border-radius:4cm;border:solid 2px white;text-align:center;color:white;}
 	#menu-title {text-align:center; padding:10px; display:none; background:none; color:white; font-size:30px;}
 	@media screen and (max-width:800px) {
@@ -168,6 +170,8 @@
 		-webkit-appearance: none;
 	}
 
+	/* index page */
+	.index-ftunews {position:relative; top:00cm; left:50px; color:white; font-size:84px; margin-top:40px;}
 	.index-events tr:nth-child(odd) {
 		background:black;
 		color:white;
@@ -320,4 +324,82 @@
 	}
 	.index-shortnews-arrows img {
 		margin-left:20px;
+	}
+
+	/* menu*/
+	.menu {
+		position: relative;
+		margin-top:10px;
+	}
+	.menu-item {
+	}
+	.menu-item-link {
+		border:solid 1px rgba(0,0,0,0);
+		padding:4px;
+		margin-right:10px;
+	}
+	.menu-item-link:hover {
+		border:solid 1px white;
+	}
+	.submenu {
+		position:absolute;
+		top:22px;
+		left:inherit;
+		transform: scaleY(0);
+		opacity: 0;
+		transition: opacity .4s ease-in-out;
+		-moz-transition: opacity .4s ease-in-out;
+		-webkit-transition: opacity .4s ease-in-out;
+	}
+	.submenu a {
+		margin-right:8px;
+	}
+	.submenu-hr {
+		width:100%;
+		margin:00px;
+		transform: scaleX(0);
+		transition-duration: 0.4s;
+	}
+	.menu-item:hover .submenu {
+		display: block;
+		opacity: 1;
+		transform: scaleY(1);
+	}
+	.menu-item:hover .submenu-hr {
+		transform: scaleX(1);
+	}
+
+	.btn-harmburger {
+		font-size:50px;
+		line-height:50px;
+		color:white;
+		display:none;
+	}
+	.btn-close {
+		font-size:30px;
+		line-height:30px;
+		color:black;
+	}
+	@media screen and (max-width: 768px) {
+		.btn-harmburger {
+			display:inline;
+		}
+		.menu {
+			display: none;
+		}
+	}
+
+	.index-sidemenu {
+		position:fixed;
+		top:0; left:0; bottom:0;
+		background:white;
+		z-index:100;
+		overflow-y: scroll;
+		width:256px; height:100%;
+		transform: translateX(-256px);
+		-webkit-transition: transform .4s;
+		-moz-transition: transform .4s;
+		-ms-transition: transform .4s;
+		-o-transition: transform .4s;
+		transition: transform .4s;/**/
 	}
