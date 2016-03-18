@@ -1,0 +1,320 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>FTU News</title>
+<link type="text/css" rel="stylesheet" href="css/ftu-news.css" />
+<script type="text/javascript" src="js/ftu-news.js"></script>
+</head>
+<body>
+
+<!--- HEADER --->
+<div class="header-bar" >
+	<div class="page-width header" >
+		<font color="#DC6803">follow us on</font>
+        <a href="http://www.facebook.com">Facebook</a>
+        <a href="http://www.instagram.com">Instagram</a>
+        <a href="http://www.youtube.com">Youtube</a>
+	</div>
+</div>
+<div style="clear:both"></div>
+
+<!---------------------------------->
+
+<div class="page-width" style="background-color:white;">
+	
+    <!----- Menu ---->
+    <div id="menu-title" class="float-left">
+    	<div id="menu-button">&#9776;</div>
+      <div>FTUNEWS</div>
+    </div>
+    <div id="menu" class="float-left" style="color:black;">
+        <div>hỗ trợ sinh viên</div>
+        <div>điểm tin</div>
+        <div>chuyển động FTU2</div>
+        <div>phóng sự</div>
+        <div>cảm thức</div>
+        <div>vitamin biz</div>
+        <div>search</div>
+    </div>
+    <script>
+		document.getElementById("menu-button").onclick = function() {
+			var t = document.getElementById("menu");
+			if (!t.classList.contains("menu-display")) t.classList.add("menu-display");
+				else t.classList.remove("menu-display");
+		}
+    </script>
+
+
+		<!----Logo----->
+    <div id="logo" style="margin-top:30px; ">
+        <div style="float:left; font-size:77px; margin-left:47px;">
+            FTUNEWS
+        </div>
+        <!---- Slides Box ---->
+        <div id="slides-box" style="margin-left:10px;">
+            <div style="padding:27px 10px 0px 10px;" onclick="prevSlide()">
+                <img src="Images/arrow-short.png"/>
+            </div>
+            <div id="slides-frame" >
+                <div id="slides-container" style="width:50cm;transform:translateX(0px);">
+                    <div>
+                        <img src="Images/BN-LX259_symmoy_J_20151230140321 copy.jpg" />
+                        <div>
+                            <div>1. Bản tin sinh viên </div>
+                            [AECitizen] Nhà tài trợ bạc Youth Development
+                        </div>
+                    </div>
+                    <div>
+                        <img src="Images/BN-LX276_symrot_J_20151230142215.png" />
+                        <div>
+                            <div>2. Bản tin sinh viên </div>
+                            [AECitizen] Nhà tài trợ bạc Youth Development
+                        </div>
+                    </div>
+                    <div>
+                        <img src="Images/BN-LX298_symwil_J_20151230143515.jpg" />
+                        <div>
+                            <div>3. Bản tin sinh viên </div>
+                            [AECitizen] Nhà tài trợ bạc Youth Development
+                        </div>
+                    </div>
+                    <div>
+                        <img src="Images/BN-LX259_symmoy_J_20151230140321 copy.jpg" />
+                        <div>
+                            <div>4. Bản tin sinh viên </div>
+                            [AECitizen] Nhà tài trợ bạc Youth Development
+                        </div>
+                    </div>
+                    <div>
+                        <img src="Images/BN-LX259_symmoy_J_20151230140321 copy.jpg" />
+                        <div>
+                            <div>5. Bản tin sinh viên </div>
+                            Thông tin chính thức về hội thảo ACE Talk
+                        </div>
+                    </div>
+                    <div>
+                        <img src="Images/BN-LX259_symmoy_J_20151230140321 copy.jpg" />
+                        <div>
+                            <div>6. Bản tin sinh viên </div>
+                            K54A - Tân vương của thể thao Ngoại Thương
+                        </div>
+                    </div>
+                    <div style="clear:both"></div>
+                </div>
+						</div>                        
+            <div style="padding:27px 10px 0px 10px;" onclick="nextSlide()">
+                <img src="Images/arrow-short.png" style="transform:rotate(180deg)"/>
+            </div>
+		    		<div style="clear:both;"></div>
+        </div>
+        <div style="clear:both"></div>            
+    </div>
+    <!--------------->
+    
+    
+<style>
+	#camthuc-box {position:relative;border:solid 3px black; width:333px;height:333px; text-align:center; margin:50px auto 50px; animation-timing-function:linear;}
+	#camthuc-def {display:block; opacity:0.0; position: absolute; top: 135px; left: 0; font-size: 20px; width: 100%; height: 50px;}
+	#camthuc {margin-top:100px;font-size:68px;line-height:60px;}
+	@keyframes blur { to {opacity:0.1;} }
+	@keyframes show { to {opacity:1.0;} }
+	#camthuc-box:hover{
+		cursor:default;
+	}
+	#camthuc-box:hover>#camthuc{		
+		animation-name:blur;
+		animation-duration:0.5s;
+		animation-fill-mode: forwards;
+	}
+	#camthuc-box:hover>#camthuc-def{
+		animation-name:show;
+		animation-delay:0.5s;
+		animation-duration:0.5s;
+		animation-fill-mode: forwards;
+	}	
+</style>
+    <!------ Cam Thuc -------->
+    <div style="text-align:center">
+    	<div id="camthuc-box">
+        	<div id="camthuc">cảm<br />thức</div>
+            <div id="camthuc-def">cảm thức là thức<br />khuya bị cảm</div>
+        </div>
+    </div>
+    
+
+    
+    <!------- sort by ---------->
+    <div style="float:right">sort by</div>
+    <div style="clear:both"></div>
+    
+<style>
+	#articles {margin-top:60px;}
+	#articles>div {width:33%;display:inline-block;}
+	#articles>div>a{width:300px; margin:10px auto; display:block;}
+	#articles>div>a>img{width:100%;}	
+	#articles>div>a>div:nth-child(2) {font-weight:bold;}
+	#articles>div>a>div:nth-child(3) {font-size:12px; margin-top:10px;}
+	#articles>div>a>div:nth-child(3)>span {color:orange;}
+	#articles>div>a>div:last-child {margin-top:10px;font-size:16px; line-height:18px; height:72px; text-overflow:ellipsis; overflow:hidden; }
+	@media screen and (max-width: 1000px) {
+		#articles>div {width:49%;}
+	}	
+	@media screen and (max-width: 670px) {
+		#articles>div {width:99%;}
+	}
+</style> 
+ 
+    <!------ Articles ------->
+    <div style="max-width:1100px; margin:0px auto;">
+      <div id="articles"> 
+           
+        <div>
+          <a>
+            <img src="Images/BN-LX259_symmoy_J_20151230140321 copy.jpg" />
+            <div>Jeffrey D.Sachs on How to Forge a Grand Bargain on Energy </div>
+            <div>by <span>Trung Nguyen</span>, /1/2016</div>
+            <div>
+              The Steam VR Performance Test has gotten a ton of attention lately, but one of its cooler caches of buried treasure isn't the usual obilique reference to a sequel that<!--more-->
+            </div>
+          </a>
+        </div>
+        <div>
+          <a>
+            <img src="Images/BN-LX259_symmoy_J_20151230140321 copy.jpg" />
+            <div>Jeffrey D.Sachs on How to Forge a Grand Bargain on Energy </div>
+            <div>by <span>Trung Nguyen</span>, /1/2016</div>
+            <div>
+              The Steam VR Performance Test has gotten a ton of attention lately, but one of its cooler caches of buried treasure isn't the usual obilique reference to a sequel that<!--more-->
+            </div>
+          </a>
+        </div>
+        <div>
+          <a>
+            <img src="Images/BN-LX259_symmoy_J_20151230140321 copy.jpg" />
+            <div>Jeffrey D.Sachs on How to Forge a Grand Bargain on Energy </div>
+            <div>by <span>Trung Nguyen</span>, /1/2016</div>
+            <div>
+              The Steam VR Performance Test has gotten a ton of attention lately, but one of its cooler caches of buried treasure isn't the usual obilique reference to a sequel that<!--more-->
+            </div>
+          </a>
+        </div>
+        <div>
+          <a>
+            <img src="Images/BN-LX259_symmoy_J_20151230140321 copy.jpg" />
+            <div>Jeffrey D.Sachs on How to Forge a Grand Bargain on Energy </div>
+            <div>by <span>Trung Nguyen</span>, /1/2016</div>
+            <div>
+              The Steam VR Performance Test has gotten a ton of attention lately, but one of its cooler caches of buried treasure isn't the usual obilique reference to a sequel that<!--more-->
+            </div>
+          </a>
+        </div>
+        <div>
+          <a>
+            <img src="Images/BN-LX259_symmoy_J_20151230140321 copy.jpg" />
+            <div>Jeffrey D.Sachs on How to Forge a Grand Bargain on Energy </div>
+            <div>by <span>Trung Nguyen</span>, /1/2016</div>
+            <div>
+              The Steam VR Performance Test has gotten a ton of attention lately, but one of its cooler caches of buried treasure isn't the usual obilique reference to a sequel that<!--more-->
+            </div>
+          </a>
+        </div>
+        <div>
+          <a>
+            <img src="Images/BN-LX259_symmoy_J_20151230140321 copy.jpg" />
+            <div>Jeffrey D.Sachs on How to Forge a Grand Bargain on Energy </div>
+            <div>by <span>Trung Nguyen</span>, /1/2016</div>
+            <div>
+              The Steam VR Performance Test has gotten a ton of attention lately, but one of its cooler caches of buried treasure isn't the usual obilique reference to a sequel that<!--more-->
+            </div>
+          </a>
+        </div>
+        
+        
+        
+    	</div>
+    </div>
+<script>
+	function changePage(e,t) {
+		if (e.keyCode!=13) return;
+		alert(t.innerHTML);
+	}
+</script>
+    <!---- page number --->
+    <div style="text-align:center;position:relative;margin-top:130px;padding-bottom:90px;">
+      <div style="display:inline-block;">
+    	<div style="float:left;width:22px;height:22px;background:black;border-radius:100%;color:white;text-align:center;"contenteditable="true" onkeypress="changePage(event,this)">
+        	1
+        </div>
+        <div style="display:inline-block;margin-left:10px;">
+	    	<img src="Images/arrow-right-black.png" height="22px" />
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="page-width">    
+    
+    <!------- Bottom Menu ---------->
+    <div class="bot-menu" style="width:auto">
+	    <div class="bot-menu-title">FTUNEWS</div>
+        <div>
+            <b>điểm tin</b><br />
+            bản tin sinh viên<br />
+            tuyển sinh<br />			
+        </div>
+        <div>
+            <b>chuyển động ftu2</b><br />
+            FTUCharm 2016<br />
+            người trẻ<br />
+            FTUShine<br />
+        </div>
+        <div>
+            <b>phóng sự</b><br />
+            phóng sự ảnh<br />
+        </div>
+        <div>
+            <b>hỗ trợ sinh viên</b><br />
+            học bổng<br />
+            nhà trọ<br />
+            việc làm<br />
+        </div>
+        <div>
+            <b>cảm thức</b><br />
+            cafe thư<br />
+        </div>
+        <div>
+            <b>vitamin biz</b><br />
+            chuyện kinh doanh<br />
+            menu giải trí<br />
+        </div>
+    </div>
+    <div style="clear:both;"></div>    
+    
+    
+    <!--- follow us on FB --->
+    <div class="follow-us">
+        <div style="">
+        	<div>follow us<br />on</div>
+            <div>Facebook<br />YouTube</div>
+        </div>
+    </div>
+    <!----------------------------->
+    
+    <!--- FOOTER --->
+    <div class="footer">
+    	<div>&copy; 2016 FTUNEWS</div>
+        <div>contact us</div>
+        <div>advertise</div>
+        <div>privacy</div>
+        <div style="margin-right:2cm;">terms of services</div>
+        <div>site map</div>
+        <div>help</div>
+        <div>subscription</div>
+  	</div>
+    <div style="clear:both; height:0; width:0"></div>
+</div>
+
+
+</body>
+</html>

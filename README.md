@@ -11,3 +11,6 @@ Create a new theme for FTUNEWS.com
 - Xuân Trường (PM)
 - Trung Biscuit (Designer)
 - Đức (Developer)
+
+## Duc has read this.
+## Duc has read this twice.
