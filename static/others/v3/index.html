@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Home Page</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../slick/slick.css" rel="stylesheet">
+    <link href="../slick/slick-theme.css" rel="stylesheet">
+    <link href="../css/ftu-news.css" rel="stylesheet"/>
+    <link href="../css/full-slider.css" rel="stylesheet"/>
+</head>
+
+
+<body>
+<a name="dautrang"></a>
+
+  <!--- HEADER --->
+    <div class="header-bar" >
+        <header class="page-width" >
+            <span style="color:#DC6803">follow us on</span>
+            <a href="http://www.facebook.com">Facebook</a>
+            <a href="http://www.instagram.com">Instagram</a>
+            <a href="http://www.youtube.com">Youtube</a>
+        </header>
+    </div>
+
+
+<!--- big-pic --->
+<div id="big-pic" style="position:relative; overflow:hidden;">
+  <!-- Background Pic -->
+  
+  <div id="big-pic-container" style="overflow:hidden;width:100%;height:100%; background-image:url(../Images/Yax-from-Zootopia.jpg); background-size:cover; background-position:center;">
+  </div>
+ 	<!-- Mask -->
+  <div class="layer1" style="width:100%;height:100%;opacity:0.3;background:black;"></div>
+  <div class="layer1" style="height:100%;" >
+    <div class="page-width" style="position:relative;height:100%;">
+      <!----- Menu ---->
+      <div id="menu-title" class="float-left">
+        <div id="menu-button">&#9776;</div>
+        <div>FTUNEWS</div>
+      </div>
+      <div id="menu" class="float-left" style="color:white;">
+          <div>hỗ trợ sinh viên</div>
+          <div>điểm tin</div>
+          <div>chuyển động FTU2</div>
+          <div>phóng sự</div>
+          <div>cảm thức</div>
+          <div>vitamin biz</div>
+          <div>search</div>
+      </div>
+      <script>
+				document.getElementById("menu-button").onclick = function() {
+					var t = document.getElementById("menu");
+					if (!t.classList.contains("menu-display")) 
+						t.classList.add("menu-display");
+					else 
+						t.classList.remove("menu-display");
+				}
+      </script>
+      <!----- White Layer ------>
+      <div id="home-ftunews">FTU NEWS</div>
+      <script>
+        iDate = new Date();
+        aMonths = ["một","hai","ba","bốn","năm","sáu","bảy","tám","chín","mười","mười một","mười hai"]
+        ap = ["AM","PM"]; 
+      </script>         
+      <!----- Date Time ----->   
+      <div id="date-time" >
+        <div style="margin-top:40px;font-style:italic;font-size:20px">
+          <script>
+            var h = iDate.getHours(), m = iDate.getMinutes();
+            document.write((h+11)%12+1 + ":" + m + " " + ap[parseInt(h/12)]);					
+          </script>
+        </div>
+        <hr style="margin-top:6px;width:66px;border:dotted 3px white;border-left:none;transform:skewX(-20deg);" />
+        <div style="margin:16px auto 0px;">
+              <div style="display:inline-block;font-size:70px;line-height:60px;">
+                <script>document.write(iDate.getDate());</script>
+              </div>
+              <div style="display:inline-block;text-align:left;font-size:34px;line-height:30px">
+                tháng<br /><script>document.write(aMonths[iDate.getMonth()]);</script>
+              </div>
+            <div style="clear:both"></div>
+        </div>
+        <hr style="width:66px;border:dotted 3px white;border-left:none;transform:skewX(-20deg);margin:20px auto 0px;" />
+        <div style="margin-top:4px;font-style:italic;font-size:18px;">
+          2016
+        </div>
+      </div>
+      <!----- Words ------->
+      <div style="position:absolute;right:1cm; bottom:4cm; color:white; ">
+        <H1 style="text-align:right">What to expect in 2016</H1>
+        Look for breakthroughs, comebacks and new solutions to <br />
+        familiar problems: 17 prominent thinkers on the big<br />
+        developments that they anticipate or hope for.
+      </div>
+      <div style="position:absolute; bottom:12px; width:100%; text-align:center;">
+          <img src="../Images/Start%20mark.png" />
+      </div> 
+		</div>
+    
+  </div>        
+</div>
+    
+    
+<!-- MAIN -->
+<style>
+	.float-left>a {float:left}
+	#latest {margin-left:3%; width:67%; background:;}
+	#latest-frame>div {position:relative; margin-top:3px;}
+	#latest-frame>div>a {display:block;position:relative;height:150px;}
+	#latest-frame>div>a>div:first-child {position:absolute;width:100%;height:100%; overflow:hidden;}
+	#latest-frame>div>a>div:last-child {position:absolute;left:5px;bottom:10px;color:white;}
+
+	#hot {margin-left:3%; width:24%; background:#FF0033}
+	@media screen and (max-width: 768px) {
+		#upper>div {width:100%; margin:0px;}
+	}
+</style>
+<div class="page-width" style="position:relative;background-color:white;margin-top:-40px;">    
+  <!--- UPPER --->
+  <div id="upper" class="float-left">
+  	<div id="latest">
+    	<!-- latest head -->
+      <img src="../Images/Moi-Nhat.png" width="408" height="48" />
+      <span style="margin-left:10px;padding:0px 16px 0px 16px;border:solid 1px black;position:relative;top:-5px;">TỪ FTUNEWS</span>
+      <br />
+      <div id="latest-frame">
+        <!-- row 1 -->
+        <div class="float-left" style="position:relative;">
+          <a href="" style="width:55%">
+            <div style="background-image:url(../Images/BN-LX276_symrot_J_20151230142215.png);background-size:cover; background-position:center center">
+            	<div class="layer1" style=""></div>
+            </div>
+            <div>Khi mua hàng chỉ cần nói: "Tôi trả bằng Google"</div>
+          </a>
+          <a href="" style="width:44%;margin-left:1%;">
+            <div >
+              <img src="../Images/BN-LX298_symwil_J_20151230143515.jpg" width="100%" />
+            </div>
+            <div>A Sofofooooo Symboll blasdfasdfasfd  saf s sda fahcblahbcblsdhfa</div>
+          </a>
+        </div>
+        <!-- row 2 -->
+        <div class="float-left" style="position:relative;"> 
+          <a href="" style="width:37%">
+            <div >
+              <img src="../Images/BN-LX276_symrot_J_20151230142215.png" width="100%" />
+            </div>
+            <div>Khi mua hàng chỉ cần nói: "Tôi trả bằng Google"</div>
+          </a>
+          <a href="" style="width:62%;margin-left:1%;">
+            <div >
+              <img src="../Images/BN-LX298_symwil_J_20151230143515.jpg" width="100%" />
+            </div>
+            <div>A Sofofooooo Symboll blasdfasdfasfd  saf s sda fahcblahbcblsdhfa</div>
+          </a>
+        </div>
+        <!-- row 3 -->
+        <div class="float-left" style="position:relative;"> 
+          <a href="" style="width:100%">
+            <div >
+              <img src="../Images/BN-LX276_symrot_J_20151230142215.png" width="100%" />
+            </div>
+            <div>Xem truoc SYM Wolf 300 sap ra mat tai trien lam moto xe may Viet Nam</div>
+          </a>
+        </div>
+        <!-- row 4 -->
+        <div class="float-left" style="position:relative;"> 
+          <a href="" style="width:48%">
+            <div >
+              <img src="../Images/BN-LX276_symrot_J_20151230142215.png" width="100%" />
+            </div>
+            <div>Thong tin thu vi co the ban chua biet ve alsdjflaflfkjd</div>
+          </a>
+          <a href="" style="width:51%;margin-left:1%;">
+            <div >
+              <img src="../Images/BN-LX298_symwil_J_20151230143515.jpg" width="100%" />
+            </div>
+            <div>HTC ban duoc 15000 chiec kinh VIerer Pie sau 10 phut mo dat hang</div>
+          </a>
+        </div>       
+        
+			</div>    
+   	</div>
+    <div id="hot">
+    	bai viet noi bat
+    </div>
+  </div>  
+    
+  <!-- LOWER -->  
+</div>    
+
+
+    
+<div class="page-width" >   
+    
+    <!--- BOT MENU --->
+    <div class="bot-menu" style="width:auto">
+	    <div class="bot-menu-title">FTUNEWS</div>
+        <div>
+            <b>điểm tin</b><br />
+            bản tin sinh viên<br />
+            tuyển sinh<br />			
+        </div>
+        <div>
+            <b>chuyển động ftu2</b><br />
+            FTUCharm 2016<br />
+            người trẻ<br />
+            FTUShine<br />
+        </div>
+        <div>
+            <b>phóng sự</b><br />
+            phóng sự ảnh<br />
+        </div>
+        <div>
+            <b>hỗ trợ sinh viên</b><br />
+            học bổng<br />
+            nhà trọ<br />
+            việc làm<br />
+        </div>
+        <div>
+            <b>cảm thức</b><br />
+            cafe thư<br />
+        </div>
+        <div>
+            <b>vitamin biz</b><br />
+            chuyện kinh doanh<br />
+            menu giải trí<br />
+        </div>
+    </div>
+    <div style="clear:both;"></div>    
+    
+    
+    <!--- follow us on FB --->
+    <div class="follow-us">
+        <div style="">
+        	<div>follow us<br />on</div>
+            <div>Facebook<br />YouTube</div>
+        </div>
+    </div>
+    <!----------------------------->
+    
+    
+    <!--- FOOTER --->
+    <div class="footer">
+    	<div>&copy; 2016 FTUNEWS</div>
+        <div>contact us</div>
+        <div>advertise</div>
+        <div>privacy</div>
+        <div style="margin-right:2cm;">terms of services</div>
+        <div>site map</div>
+        <div>help</div>
+        <div>subscription</div>
+  	</div>
+    <div style="clear:both; height:0; width:0"></div>
+    
+		<script type="text/javascript" src="../js/ftu-news.js"></script>
+    <script type="text/javascript" src="../js/jquery-1.12.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script>
+			var heiPic = 0;
+			function setHeight() {
+				heiPic = window.innerHeight-30;
+				document.getElementById("big-pic").style.height = heiPic+"px";
+			}
+			window.onload = setHeight;
+			window.onresize = setHeight;		
+    </script>
+</div>
+
+</body>
+</html>
