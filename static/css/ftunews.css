@@ -1,7 +1,10 @@
+/***** GENERALS *****/
 body {
     background-color:rgb(242,242,242);
     margin:00px;
-    font-family:UTM Avo;
+    font-family: UTM Avo;
+}
+main {
 }
 article {
     font-family: Georgia;
@@ -10,11 +13,30 @@ nav {
     background:white;
     color:black;
 }
+a {
+    color:black;
+}
 a:hover {
     text-decoration: none;
     color:#2ea2cc;
 }
+a:visited {
+}
 
+.thumbnail {
+    border:none;
+    background:none;
+}
+.no-border-radius {
+    border-radius: 0%;
+}
+.no-padding {
+    padding: 0;
+}
+
+.display-block {
+    display:block;
+}
 .float-left>div {
     float:left;
 }
@@ -22,6 +44,12 @@ a:hover {
     content:"";
     display:block;
     clear:both;
+}
+.full-height {
+    height:100%;
+}
+.full-width {
+    width:100%;
 }
 
 .background-size-position {
@@ -33,10 +61,131 @@ a:hover {
     border: solid 1px rgb(225,225,225);
 }
 
+
+.text-white {
+    color:white;
+}
+.text-cover-bottom-left{
+    position:absolute;
+    left:10px;
+    right:10px;
+    bottom:10px;
+}
 .text-bold-orange {
     color:darkorange;
     font-weight:bold;
 }
+.text-orange {
+    color:darkorange;
+}
+.text-align-right {
+    text-align: right;
+}
+.text-big-bold {
+    font-size: large;
+    font-weight: bold;
+}
+
+.margin-10px {
+    margin:10px;
+}
+
+.horizontal-blocks-3 .thumbnail {
+    padding: 0px;
+}
+
+.thumbnail-horizontal-height {
+    height: 150px;
+}
+.banner-height {
+    height: 250px;
+}
+
+
+.mask {
+    width:100%; height:100%;
+    position:absolute;
+}
+.gradient-bottom-black {
+    background: none; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(bottom, transparent , black); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(top, black, transparent); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(top, black, transparent); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to top, black, transparent); /* Standard syntax */
+}
+
+
+/***** /Generals *****/
+
+/***** EXTRA COLS *****/
+/* 1/5 */
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.col-xs-15 {
+    width: 20%;
+    float: left;
+}
+@media (min-width: 768px) {
+    .col-sm-15 {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 992px) {
+    .col-md-15 {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 1200px) {
+    .col-lg-15 {
+        width: 20%;
+        float: left;
+    }
+}
+/* 2/5 */
+.col-xs-25,
+.col-sm-25,
+.col-md-25,
+.col-lg-25 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.col-xs-25 {
+    width: 40%;
+    float: left;
+}
+@media (min-width: 768px) {
+    .col-sm-25 {
+        width: 40%;
+        float: left;
+    }
+}
+@media (min-width: 992px) {
+    .col-md-25 {
+        width: 40%;
+        float: left;
+    }
+}
+@media (min-width: 1200px) {
+    .col-lg-25 {
+        width: 40%;
+        float: left;
+    }
+}
+/***** /Extra Cols *****/
+
 /* FOOTER */
 footer {
     background:black;
@@ -49,7 +198,31 @@ footer a {
     color:white;
 }
 
-/* Index */
+/***** Index *****/
+.index-top > div > a {
+    display: block;
+    height: 230px;
+}
+.section1,
+.section2,
+.section3,
+.section4,
+.section5,
+.section6,
+.section7 {
+    margin-top:50px;
+}
+
+.section1 {
+    height:440px;
+   /* background:blue;*/
+}
+
+.short-news-height {
+    height:512px;
+}
+/*---- /Index ----*/
+
 
 /* Category */
 
@@ -131,6 +304,17 @@ footer a {
         margin-right:-10%;
         width:110%;
     }
+    @media (max-width: 1200px) {
+        .single-image-overflow-left {
+            margin: 0; width:100%;
+        }
+        .single-image-overflow-right {
+            margin: 0;
+        }
+        .single-image-overflow-both {
+            margin: 0;
+        }
+    }
 .single-related-head {
     margin:30px auto;
     border:solid 1px orange;
@@ -142,16 +326,16 @@ footer a {
 }
     .single-related-body {
     }
-    .single-related-body >div> div {
+    .single-related-item {
         height:365px;
         margin:0px 0px 20px 0px;
-    }
-    .single-related-item {
+        display:block;
         padding-top:10px;
         padding-left:14px;
         padding-right:14px;
         color:white;
     }
+/***** /single *****/
 
 /* nav bar */
 .navbar-collapse {
@@ -164,10 +348,11 @@ footer a {
 }
 .navbar-nav {
     background:white;
+    margin: 0;
 }
 .navbar-collapse .navbar-nav li a {
     color:black;
-    font-size:15px;
+    font-size:14px;
     padding:14px 22px 14px 00px;
     text-transform: uppercase;
 }
