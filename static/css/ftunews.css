@@ -6,12 +6,20 @@ body {
 }
 main {
 }
+footer {
+    margin-top:30px;
+}
 article {
     font-family: Georgia;
 }
 nav {
     background:white;
     color:black;
+}
+@media (max-width: 768px) {
+    .nav.navbar-nav li a{
+        margin-left:30px;
+    }
 }
 a {
     color:black;
@@ -21,6 +29,12 @@ a:hover {
     color:#2ea2cc;
 }
 a:visited {
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width:500px;
+    }
 }
 
 .thumbnail {
@@ -55,6 +69,7 @@ a:visited {
 .background-size-position {
     background-size:cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
 
 .border1 {
@@ -94,6 +109,8 @@ a:visited {
     padding: 0px;
 }
 
+.thumbnail-horizontal {
+}
 .thumbnail-horizontal-height {
     height: 150px;
 }
@@ -113,6 +130,99 @@ a:visited {
     background: -moz-linear-gradient(top, black, transparent); /* For Firefox 3.6 to 15 */
     background: linear-gradient(to top, black, transparent); /* Standard syntax */
 }
+
+.slider-vertical {
+    position: relative;
+    height:520px;
+}
+.slider-vertical-head{
+    position:absolute;
+    top:10px;
+    left:10px;
+}
+.slider-vertical-text {
+    position: absolute;
+    bottom:60px;
+    right:10px;
+    left:10px;
+    overflow: hidden;
+    text-align: right;
+}
+.slider-vertical-control {
+    position: absolute;
+    bottom:20px;
+    right:10px;
+    color:white;
+}
+.slider-pic-height {
+    height:520px;
+}
+.carousel-caption {
+    text-align: right;
+    bottom: 70px;
+    right:30px;
+    max-height: 320px;
+    overflow: hidden;
+}
+.carousel .controller {
+    position:absolute;
+    right:30px;
+    bottom:10px;
+}
+
+/* Carousel Vertical */
+.carousel.vertical .carousel-inner {
+    height: 100%;
+}
+
+.carousel.vertical .item {
+    -webkit-transition: 0.6s ease-in-out top;
+    -moz-transition: 0.6s ease-in-out top;
+    -ms-transition: 0.6s ease-in-out top;
+    -o-transition: 0.6s ease-in-out top;
+    transition: 0.6s ease-in-out top;
+}
+
+.carousel.vertical .active {
+    top: 0;
+}
+
+.carousel.vertical .next {
+    top: 400px;
+}
+
+.carousel.vertical .prev {
+    top: -400px;
+}
+
+.carousel.vertical .next.left,
+.carousel.vertical .prev.right {
+    top: 0;
+}
+
+.carousel.vertical .active.left {
+    top: -400px;
+}
+
+.carousel.vertical .active.right {
+    top: 400px;
+}
+
+.carousel.vertical .item {
+    left: 0;
+}
+
+.carousel.vertical .carousel-control {
+    width: 100%;
+    bottom: inherit;
+    top: inherit;
+}
+
+.carousel.vertical .carousel-control.left {
+    top: 0;
+}
+/* /Carousel Vertical */
+
 
 
 /***** /Generals *****/
@@ -214,7 +324,6 @@ footer a {
 }
 
 .section1 {
-    height:440px;
    /* background:blue;*/
 }
 
