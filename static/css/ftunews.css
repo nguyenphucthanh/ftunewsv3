@@ -45,6 +45,7 @@ a {
 }
 a:hover {
     text-decoration: none;
+    color:darkorange;
 }
 a:visited {
 }
@@ -279,6 +280,18 @@ a:visited {
 }
 /***** /Extra Cols *****/
 
+/* HEADER */
+.header-ftunews {
+    font-size:55px;
+    line-height:55px;
+}
+.header-follow {
+    font-style: italic;
+}
+.header-social {
+    font-size:26px;
+}
+
 /* FOOTER */
 footer {
     padding-top:34px;
@@ -290,6 +303,25 @@ footer a {
 }
 
 /***** Index *****/
+
+.index-gridtop-item-dark {
+    position: absolute;
+    width:100%;
+    height:100%;
+    overflow: hidden;
+}
+.index-gridtop-item-table {
+    display: table;
+    height:100%;
+    width: 100%;
+}
+.index-gridtop-item-cell {
+    display: table-cell;
+    vertical-align: bottom;
+    padding:15px;
+    height:100%;
+}
+
 .section1,
 .section2,
 .section3,
@@ -341,10 +373,6 @@ footer a {
     margin-top:-100px;
     background:white
 }
-    .single-header-ftunews {
-        font-size:55px;
-        line-height:55px;
-    }
 .single-bigpic {
     padding:0; height:600px;
     background-position: center;
@@ -441,6 +469,19 @@ footer a {
         display:block;
         margin-bottom:20px;
     }
+    .single-related-item-back {
+        width:100%;
+        height:100%;
+        position: relative;
+    }
+    .single-related-item-inner {
+        position:absolute;
+        top: 15px;
+        bottom: 15px;
+        left: 15px;
+        right: 15px;
+        overflow: hidden;
+    }
 /***** /single *****/
 
 /* nav bar */
@@ -510,8 +551,11 @@ footer a {
     width:100%;
 }
 
-.background-black-blur {
+.background-dark {
     background-color: rgba(0,0,0,0.5);
+}
+.background-dark:hover {
+    background-color: rgba(0,0,0,0.7);
 }
 .background-black {
     background: black;
