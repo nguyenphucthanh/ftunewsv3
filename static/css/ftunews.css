@@ -74,11 +74,6 @@ a:visited {
 .horizontal-blocks-3 .thumbnail {
     padding: 0px;
 }
-.large-horizontal-thumbnail {
-}
-.large-horizontal-thumbnail-height {
-    height: 250px;
-}
 .thumbnail-horizontal-height {
     height: 150px;
 }
@@ -326,6 +321,20 @@ footer a {
     padding-top:10px;
     padding-bottom:10px;
 }
+.category-thumbnail-fullwidth-image {
+    height: 250px;
+}
+.category-thumbnail-fullwidth-content {
+    height: 180px;
+    overflow: hidden;
+}
+.category-thumbnail-vertical-image {
+    height:200px;
+}
+    .category-thumbnail-vertical-content {
+        height:120px;
+        overflow: hidden;
+    }
 /*----------------------------*/
 /* Single */
 .single-main {
