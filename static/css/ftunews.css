@@ -13,10 +13,11 @@
     font-style: normal;
 }
 
+
 body {
     background-color:rgb(242,242,242);
     margin:00px;
-    font-family: utm_avoregular;
+    font-family: Roboto;
 }
 main {
 }
@@ -47,15 +48,19 @@ a:hover {
     text-decoration: none;
     color:darkorange;
 }
+footer a:hover {
+}
 a:visited {
 }
 
 @media (max-width: 768px) {
-    .container {
-        max-width:500px;
-    }
     .container-xs {
         max-width:500px;
+    }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+    .container-fluid-sm {
+        width: 100%;
     }
 }
 
@@ -121,9 +126,10 @@ a:visited {
 .slider-pic-height {
     height:580px;
 }
+
 .carousel-caption {
     text-align: right;
-    bottom: 70px;
+    bottom: 90px;
     right:30px;
     max-height: 320px;
     overflow: hidden;
@@ -135,56 +141,39 @@ a:visited {
 }
 
 /* Carousel Vertical */
-.carousel.vertical .carousel-inner {
-    height: 100%;
+
+@media all and (transform-3d), (-webkit-transform-3d) {
+    .carousel.vertical .carousel-inner > .item {
+        -webkit-transition: -webkit-transform .6s ease-in-out;
+        -o-transition:      -o-transform .6s ease-in-out;
+        transition:         transform .6s ease-in-out;
+
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-perspective: 1000px;
+        perspective: 1000px;
+    }
+    .carousel.vertical .carousel-inner > .item.next,
+    .carousel.vertical .carousel-inner > .item.active.right {
+        left: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+    .carousel.vertical .carousel-inner > .item.prev,
+    .carousel.vertical .carousel-inner > .item.active.left {
+        left: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+    .carousel.vertical .carousel-inner > .item.next.left,
+    .carousel.vertical .carousel-inner > .item.prev.right,
+    .carousel.vertical .carousel-inner > .item.active {
+        left: 0;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
 }
 
-.carousel.vertical .item {
-    -webkit-transition: 0.6s ease-in-out top;
-    -moz-transition: 0.6s ease-in-out top;
-    -ms-transition: 0.6s ease-in-out top;
-    -o-transition: 0.6s ease-in-out top;
-    transition: 0.6s ease-in-out top;
-}
-
-.carousel.vertical .active {
-    top: 0;
-}
-
-.carousel.vertical .next {
-    top: 400px;
-}
-
-.carousel.vertical .prev {
-    top: -400px;
-}
-
-.carousel.vertical .next.left,
-.carousel.vertical .prev.right {
-    top: 0;
-}
-
-.carousel.vertical .active.left {
-    top: -400px;
-}
-
-.carousel.vertical .active.right {
-    top: 400px;
-}
-
-.carousel.vertical .item {
-    left: 0;
-}
-
-.carousel.vertical .carousel-control {
-    width: 100%;
-    bottom: inherit;
-    top: inherit;
-}
-
-.carousel.vertical .carousel-control.left {
-    top: 0;
-}
 /* /Carousel Vertical */
 
 
@@ -284,9 +273,7 @@ a:visited {
 .header-ftunews {
     font-size:55px;
     line-height:55px;
-}
-.header-follow {
-    font-style: italic;
+    font-family: utm_avoregular;
 }
 .header-social {
     font-size:26px;
@@ -304,10 +291,55 @@ footer a {
 
 /***** Index *****/
 
+.header-social-box .fa {
+    color:black;
+}
+.header-social-box .fa:hover {
+    color:black;
+    text-decoration: none;
+}
+.header-social-box .fa:active {
+    color:black;
+}
+.header-social-box .fa:visited {
+    color:black;
+}
+.header-social-box .fa:link {
+    color:black;
+    text-decoration: none;
+}
+
+/*-- Carousel controller --*/
+.carousel .controller .fa {
+    font-size: 50px;
+    text-decoration: none;
+}
+.carousel .controller .fa-angle-up {
+    line-height: 0px;
+}
+.carousel .controller .fa:active {
+    text-decoration: none;
+    color:white;
+}
+.carousel .controller .fa:hover{
+    color:white;
+}
+.carousel .controller .fa:link{
+    color:white;
+}
+/*-- /Carousel controller--*/
+
 .index-gridtop-item-dark {
     position: absolute;
     width:100%;
     height:100%;
+}
+.index-gridtop-item-inner {
+    position: absolute;
+    top:15px;
+    left:15px;
+    right:15px;
+    bottom: 18px;
     overflow: hidden;
 }
 .index-gridtop-item-table {
@@ -318,7 +350,7 @@ footer a {
 .index-gridtop-item-cell {
     display: table-cell;
     vertical-align: bottom;
-    padding:15px;
+    /*padding:15px;*/
     height:100%;
 }
 
@@ -399,7 +431,7 @@ footer a {
         text-decoration: underline;
     }
     .single-details {
-        font-family:Georgia;
+        font-family:"Noto Serif";
         font-size:16px;
         font-style: italic;
         margin-top:40px;
@@ -426,7 +458,7 @@ footer a {
         padding:24px;
     }
 .single-article {
-    font-family: Georgia;
+    font-family: "Noto Serif";
     font-size:18px;
     border-bottom:solid 1px silver;
     padding-bottom:65px;
