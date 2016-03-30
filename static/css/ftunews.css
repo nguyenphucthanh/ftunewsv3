@@ -65,13 +65,6 @@ a:visited {
 }
 
 /* Self-defined templates */
-.label-trending {
-    display:inline-block;
-    background-color: rgb(234,143,28);
-    color:white;
-    font-style: italic;
-    padding:3px 10px;
-}
 .btn-load-more {
     width: 100%;
     border: solid 1px darkgrey;
@@ -280,9 +273,16 @@ a:visited {
 }
 
 /* FOOTER */
+.footer-ftunews {
+    font-family: utm_avoregular;
+}
+.footer-copy {
+    text-align: right;
+    margin-top: 60px;
+    padding-bottom:10px;
+}
 footer {
     padding-top:34px;
-    padding-bottom:10px;
 }
 footer a {
     display:block;
@@ -290,6 +290,21 @@ footer a {
 }
 
 /***** Index *****/
+
+.label-trending {
+    display:inline-block;
+    background-color: rgb(234,143,28);
+    color:white;
+    font-style: italic;
+    padding:3px 10px;
+}
+.trending-slick {
+    margin-top:6px;
+}
+.trending-prev:hover, .trending-next:hover {
+    color:yellow;
+    cursor: pointer;
+}
 
 .header-social-box .fa {
     color:black;
@@ -353,6 +368,11 @@ footer a {
     /*padding:15px;*/
     height:100%;
 }
+.index-gridtop-item-category {
+    border-bottom: solid 1px white;
+    display:inline-block;
+    margin-bottom: 10px;
+}
 
 .section1,
 .section2,
@@ -378,6 +398,8 @@ footer a {
 
 
 /* Category */
+
+
 .text-category-name {
     font-weight: bold;
     font-size: 24px;
@@ -463,18 +485,26 @@ footer a {
     border-bottom:solid 1px silver;
     padding-bottom:65px;
 }
+    .single-article-container {
+        padding: 0 90px;
+    }
+    @media screen and (max-width: 768px) {
+        .single-article-container {
+            padding:0;
+        }
+    }
+    .single-article p img {
+        width:100%;
+    }
     .single-image-overflow-both {
-        margin-left:-10%;
-        margin-right:-10%;
-        width:120%;
+        margin-left:-90px;
+        margin-right:-90px;
     }
     .single-image-overflow-left {
-        margin-left:-10%;
-        width:110%;
+        margin-left:-90px;
     }
     .single-image-overflow-right {
-        margin-right:-10%;
-        width:110%;
+        margin-right:-90px;
     }
     @media (max-width: 992px) {
         .single-image-overflow-left {
@@ -499,9 +529,11 @@ footer a {
     .single-related-item {
         height:280px;
         display:block;
-        margin-bottom:20px;
     }
-    .single-related-item-back {
+    .single-related-item-outer {
+        padding:10px;
+    }
+    .single-related-item-dark {
         width:100%;
         height:100%;
         position: relative;
@@ -513,6 +545,12 @@ footer a {
         left: 15px;
         right: 15px;
         overflow: hidden;
+    }
+    .single-related-slick {
+        padding-bottom:0;
+    }
+    .single-related-slick-control {
+        padding: 0 10px;
     }
 /***** /single *****/
 
