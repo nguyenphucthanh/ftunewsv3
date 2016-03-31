@@ -6,57 +6,145 @@
 
 get_header(); ?>
 
-<div id="main" role="main">
+
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-  <article <?php post_class() ?> id="post-<?php the_ID(); ?>">
-    <header>
-      <h2><?php the_title(); ?></a></h2>
-    </header>
-    <?php the_content('Read the rest of this entry &raquo;'); ?>
-    <?php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
-    <?php the_tags( '<p>Tags: ', ', ', '</p>'); ?>
-    <footer>
-      <p>This entry was posted by <?php the_author() ?>
-      on <time datetime="<?php the_time('Y-m-d')?>"><?php the_time('l, F jS, Y') ?></time>
-      at <time><?php the_time() ?></time>
-      and is filed under <?php the_category(', ') ?>.
-      You can follow any responses to this entry through the <?php post_comments_feed_link('RSS 2.0'); ?> feed.
+<!-- first look -->
+<div class="container-fluid single-bigpic"
+     style="background-image: url( <?php echo get_template_directory_uri(); ?>/images/aurelion-sol-wallpaper.jpg);">
+  <div class="single-table">
+    <div class="single-tablecell">
+      <div class="single-posthead">
+        <div class="single-category">
+          <?php
+            $category = get_the_category( get_the_ID() );
+            echo $category[0]->cat_name;
+          ?>
+        </div>
+        <h2 class="single-title"><?php the_title() ?></h2>
+        <div class="single-details">
+          by <span class="text-orange"><?php the_author() ?></span> on <?php the_time('F d, Y') ?> at <?php the_time('G:i') ?>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-      <?php if ( comments_open() && pings_open() ) {
-        // Both Comments and Pings are open ?>
-        You can <a href="#respond">leave a response</a>, or <a href="<?php trackback_url(); ?>" rel="trackback">trackback</a> from your own site.
+<main class="container container-xs single-main" >
+  <div class="row">
+    <div class="col-md-2 single-aside margin-top-20px">
+      <!-- View count -->
+      <div class="border1 single-viewcount">
+        <div>Views</div>
+        <div style="font-size:20px"><b><?php //view count ?></b></div>
+      </div>
+      <div style="margin-top:12px;">Share on</div>
+      <div class="float-left single-aside-social">
+        <div class="border1" style="width:50%; margin: -1px;">
+          <img src="<?php echo get_template_directory_uri() ?>/images/btn-aside-facebook.png" alt="">
+        </div>
+        <div class="border1" style="width:50%; margin:-1px;">
+          <img src="<?php echo get_template_directory_uri() ?>/images/btn-aside-twitter.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8 margin-top-20px">
+      <div class="single-article">
+          <?php the_content('Read the rest of this entry &raquo;'); ?>
+      </div>
+    </div>
+  </div>
 
-      <?php } elseif ( !comments_open() && pings_open() ) {
-        // Only Pings are Open ?>
-        Responses are currently closed, but you can <a href="<?php trackback_url(); ?> " rel="trackback">trackback</a> from your own site.
+  <!-- Related -->
+  <div class="single-related">
+    <div class="single-related-head">RELATED</div>
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8 single-related-body">
+        <div class="single-related-slick" >
 
-      <?php } elseif ( comments_open() && !pings_open() ) {
-        // Comments are open, Pings are not ?>
-        You can skip to the end and leave a response. Pinging is currently not allowed.
+          <?php // loop: get related ?>
+          <div>
+            <div class="single-related-item-outer">
+              <a href="" class="background-size-position single-related-item" style="background-image: url(<?php // img ?>)">
+                <div class="background-dark single-related-item-dark">
+                  <div class="single-related-item-inner text-white text-big-bold">
+                    <?php //Title ?>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div>
+            <div class="single-related-item-outer">
+              <a href="" class="background-size-position single-related-item" style="background-image: url(<?php // img ?>)">
+                <div class="background-dark single-related-item-dark">
+                  <div class="single-related-item-inner text-white text-big-bold">
+                    <?php //Title ?>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div>
+            <div class="single-related-item-outer">
+              <a href="" class="background-size-position single-related-item" style="background-image: url(<?php // img ?>)">
+                <div class="background-dark single-related-item-dark">
+                  <div class="single-related-item-inner text-white text-big-bold">
+                    <?php //Title ?>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div>
+            <div class="single-related-item-outer">
+              <a href="" class="background-size-position single-related-item" style="background-image: url(<?php // img ?>)">
+                <div class="background-dark single-related-item-dark">
+                  <div class="single-related-item-inner text-white text-big-bold">
+                    <?php //Title ?>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div>
+            <div class="single-related-item-outer">
+              <a href="" class="background-size-position single-related-item" style="background-image: url(<?php // img ?>)">
+                <div class="background-dark single-related-item-dark">
+                  <div class="single-related-item-inner text-white text-big-bold">
+                    <?php //Title ?>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
 
-      <?php } elseif ( !comments_open() && !pings_open() ) {
-        // Neither Comments, nor Pings are open ?>
-        Both comments and pings are currently closed.
+        </div>
+        <div class="row single-related-slick-control">
+          <div class="col-xs-6">
+            <button class="btn btn-warning related-back">Back</button>
+          </div>
+          <div class="col-xs-6 text-align-right">
+            <button class="btn btn-warning related-next">Next</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-      <?php } edit_post_link('Edit this entry','','.'); ?>
-      </p>
-    </footer>
-    <nav>
-      <div><?php previous_post_link('&laquo; %link') ?></div>
-      <div><?php next_post_link('%link &raquo;') ?></div>
-    </nav>
-
-    <?php comments_template(); ?>
-
-  </article>
+  <!-- Facebook Comment -->
+  <div class="single-fbcmt">
+  </div>
+</main>
 
 <?php endwhile; else: ?>
 
-  <p>Sorry, no posts matched your criteria.</p>
+  <p>No posts. :(</p>
 
 <?php endif; ?>
+
 
 </div>
 

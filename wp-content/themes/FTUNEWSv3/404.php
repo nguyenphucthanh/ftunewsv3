@@ -4,17 +4,10 @@
  * @subpackage HTML5_Boilerplate
  */
 
-get_header(); ?>
+//get_header(); ?>
 
-  <div id="main" role="main">
+<div style="max-width: 600px; margin:0px auto">
+  <img src="<?php echo get_template_directory_uri() ?>/images/404.jpg" draggable="false" style="width:100%; height:auto">
+</div>
 
-    <details>
-      <summary><h1>Not found</h1></summary>
-      <p><span frown>:(</span></p>
-    </details>
-
-  </div>
-
-<?php get_sidebar(); ?>
-
-<?php get_footer(); ?>
+<?php //get_footer(); ?>

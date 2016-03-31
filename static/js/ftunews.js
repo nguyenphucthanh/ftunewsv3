@@ -1,5 +1,5 @@
 // JavaScript Document
-
+/*
 var heiPic = 0;
 function setHeight() {
 	heiPic = window.innerHeight-30;
@@ -25,4 +25,24 @@ $('.ShowSideMenu').click(function() {
 });
 $('.HideSideMenu').click(function() {
 	$('.index-sidemenu').css('transform', 'translateX(-256px)');
+});*/
+
+
+// slick config
+$(document).ready(function() {
+	//Related
+	$('.single-related-slick').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		prevArrow: $('.related-back'),
+		nextArrow: $('.related-next')
+	});
+	//Trending
+	$('.trending-slick').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		vertical: true,
+		prevArrow: $('.trending-prev'),
+		nextArrow: $('.trending-next'),
+	});
 });
