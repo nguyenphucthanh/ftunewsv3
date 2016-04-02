@@ -7,12 +7,11 @@
 get_header(); ?>
 
 
-
-<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+<?php if (have_posts()) : the_post(); ?>
 
 <!-- first look -->
-<div class="container-fluid single-bigpic"
-     style="background-image: url( <?php echo get_template_directory_uri(); ?>/images/aurelion-sol-wallpaper.jpg);">
+<div class="container-fluid single-bigpic ratio-16-9"
+     style="background-image: url( <?php the_post_thumbnail_url(); ?>);">
   <div class="single-table">
     <div class="single-tablecell">
       <div class="single-posthead">
@@ -42,7 +41,7 @@ get_header(); ?>
       <div style="margin-top:12px;">Share on</div>
       <div class="float-left single-aside-social">
         <div class="border1" style="width:50%; margin: -1px;">
-          <img src="<?php echo get_template_directory_uri() ?>/images/btn-aside-facebook.png" alt="">
+            <img src="<?php echo get_template_directory_uri() ?>/images/btn-aside-facebook.png" alt="">
         </div>
         <div class="border1" style="width:50%; margin:-1px;">
           <img src="<?php echo get_template_directory_uri() ?>/images/btn-aside-twitter.png" alt="">
@@ -64,63 +63,40 @@ get_header(); ?>
       <div class="col-md-8 single-related-body">
         <div class="single-related-slick" >
 
-          <?php // loop: get related ?>
+          <?php
+            $tags = get_the_tags(); // array of objects
+            if ($tags):
+              $tagIDs = array();
+              foreach ($tags as $tag) {
+                echo $tag->id;
+              }
+              $args = array(
+                'posts_per_page' => 10,
+                'tag__in' => $tagIDs,
+                'order' => 'DESC',
+                'orderby' => 'date',
+                'post__not_in' => array(get_the_ID()),
+              );
+              $queryRelated = new WP_Query($args);
+              while ($queryRelated->have_posts()):
+                $queryRelated->the_post();
+          ?>
           <div>
             <div class="single-related-item-outer">
-              <a href="" class="background-size-position single-related-item" style="background-image: url(<?php // img ?>)">
+              <a href="" class="background-size-position single-related-item"
+                 style="background-image: url(<?php the_post_thumbnail_url() ?>)">
                 <div class="background-dark single-related-item-dark">
                   <div class="single-related-item-inner text-white text-big-bold">
-                    <?php //Title ?>
+                    <?php the_title() ?>
                   </div>
                 </div>
               </a>
             </div>
           </div>
-          <div>
-            <div class="single-related-item-outer">
-              <a href="" class="background-size-position single-related-item" style="background-image: url(<?php // img ?>)">
-                <div class="background-dark single-related-item-dark">
-                  <div class="single-related-item-inner text-white text-big-bold">
-                    <?php //Title ?>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div>
-            <div class="single-related-item-outer">
-              <a href="" class="background-size-position single-related-item" style="background-image: url(<?php // img ?>)">
-                <div class="background-dark single-related-item-dark">
-                  <div class="single-related-item-inner text-white text-big-bold">
-                    <?php //Title ?>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div>
-            <div class="single-related-item-outer">
-              <a href="" class="background-size-position single-related-item" style="background-image: url(<?php // img ?>)">
-                <div class="background-dark single-related-item-dark">
-                  <div class="single-related-item-inner text-white text-big-bold">
-                    <?php //Title ?>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div>
-            <div class="single-related-item-outer">
-              <a href="" class="background-size-position single-related-item" style="background-image: url(<?php // img ?>)">
-                <div class="background-dark single-related-item-dark">
-                  <div class="single-related-item-inner text-white text-big-bold">
-                    <?php //Title ?>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-
+          <?php
+              endwhile;
+              endif;
+          ?>
         </div>
         <div class="row single-related-slick-control">
           <div class="col-xs-6">
@@ -139,7 +115,7 @@ get_header(); ?>
   </div>
 </main>
 
-<?php endwhile; else: ?>
+<?php else: ?>
 
   <p>No posts. :(</p>
 

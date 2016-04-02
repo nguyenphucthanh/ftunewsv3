@@ -41,8 +41,10 @@
 
     <link href="<?php echo get_template_directory_uri(); ?>/html5-boilerplate/css/bootstrap.min.css" rel="stylesheet">
     <link href="<?php echo get_template_directory_uri(); ?>/html5-boilerplate/css/font-awesome.min.css" rel="stylesheet">
+
     <link href='https://fonts.googleapis.com/css?family=Roboto&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Noto+Serif&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+
     <link href="<?php echo get_template_directory_uri(); ?>/html5-boilerplate/slick/slick.css" rel="stylesheet">
     <link href="<?php echo get_template_directory_uri(); ?>/html5-boilerplate/css/ftunews.css" rel="stylesheet"/>
 </head>
@@ -58,26 +60,32 @@
         <div class="row">
           <div class="col-md-10 col-sm-9">
             <div class="row">
-              <div class="col-md-4 header-ftunews margin-top-20px">
+              <a href="<?php echo get_site_url(); ?>" class="display-block col-md-4 header-ftunews margin-top-20px">
                 FTUNEWS
-              </div>
+              </a>
               <div class="col-md-8 margin-top-20px">
                 <div class="label-trending">
                   <span class="trending-prev"><<</span> TRENDING <span class="trending-next">>></span>
                 </div>
                 <div class="trending-slick">
+                  <?php
+                  // Most view
+                    $args = array(
+                      'posts_per_page' => 5,
+                      'order' => 'DESC',
+                        'orderyby' => 'date'
+                    );
+                    query_posts($args);
+                    while (have_posts()):
+                      the_post();
+                  ?>
                   <div>
-                    <a href="#">1.Android N is really fast and fluid, width some inevitable bugs</a>
+                    <a href="<?php the_permalink() ?>"><?php the_title() ?></a>
                   </div>
-                  <div>
-                    <a href="#">2.Android N is really fast and fluid, width some inevitable bugs</a>
-                  </div>
-                  <div>
-                    <a href="#">3.Android N is really fast and fluid, width some inevitable bugs</a>
-                  </div>
-                  <div>
-                    <a href="#">4.Android N is really fast and fluid, width some inevitable bugs</a>
-                  </div>
+                  <?php
+                    endwhile;
+                    wp_reset_query();
+                  ?>
                 </div>
               </div>
             </div>
@@ -102,12 +110,18 @@
 
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-              <li><a href="#">chuyển động ftu2</a></li>
-              <li><a href="#">điểm tin</a></li>
-              <li><a href="#">cảm thức</a></li>
-              <li><a href="#">phóng sự</a></li>
-              <li><a href="#">hỗ trợ sinh viên</a></li>
-              <li><a href="#">vitamin biz</a></li>
+              <?php
+                $args = array(
+                    'parent' => 0,
+                    'exclude' => '1',
+                );
+                $cats = get_categories($args);
+                foreach ($cats as $cat) {
+                  ?>
+                  <li><a href="<?php echo get_site_url(),'/category/',$cat->slug ?>"><?php echo $cat->cat_name ?></a></li>
+                  <?php
+                }
+                ?>
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li><a href="javascript:$('#header-search-bar').slideToggle();">search</a></li>

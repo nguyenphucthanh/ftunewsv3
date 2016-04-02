@@ -4,44 +4,107 @@
  * @subpackage HTML5_Boilerplate
  */
 
-get_header(); ?>
+get_header();
 
-<div id="main" role="main">
-  <?php if (have_posts()) : ?>
-    <?php while (have_posts()) : the_post(); ?>
+$args = array (
+  'posts_per_page'=> 24,
+  'order' => 'DESC',
+  'orderby' => 'date'
+);
+query_posts($args);
 
-      <article <?php post_class() ?> id="post-<?php the_ID(); ?>">
-        <header>
-          <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-          <time datetime="<?php the_time('Y-m-d')?>"><?php the_time('F jS, Y') ?></time>
-          <span class="author">by <?php the_author() ?></span>
-        </header>
-        <?php the_content('Read the rest of this entry &raquo;'); ?>
-        <footer>
-          <?php the_tags('Tags: ', ', ', '<br />'); ?> 
-          Posted in <?php the_category(', ') ?>
-          | <?php edit_post_link('Edit', '', ' | '); ?>
-          <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?>
-        </footer>
-      </article>
+?>
 
-    <?php endwhile; ?>
 
-    <nav>
-      <div><?php next_posts_link('&laquo; Older Entries') ?></div>
-      <div><?php previous_posts_link('Newer Entries &raquo;') ?></div>
-    </nav>
+<!-- first look/ grid top -->
+<div class="container-fluid container-xs">
+  <div class="row">
 
-  <?php else : ?>
+    <?php the_gridtop_item() ?>
+    <?php the_gridtop_item_2() ?>
+    <?php the_gridtop_item() ?>
+    <?php the_gridtop_item() ?>
+    <?php the_gridtop_item() ?>
+    <?php the_gridtop_item() ?>
+    <?php the_gridtop_item() ?>
 
-    <h2>Not Found</h2>
-    <p>Sorry, but you are looking for something that isn't here.</p>
-    <?php get_search_form(); ?>
+    <div class="col-lg-15 col-sm-4 no-padding">
+      <div href="#" class="ratio-1-1">
+        <div class="index-gridtop-item-dark" style="background-color:red;">
+          <div class="index-gridtop-item-inner">
+            <div class="index-gridtop-item-table">
+              <div class="index-gridtop-item-cell text-white">
+                <div class="index-gridtop-editor-choice">EDITOR'S CHOICE</div>
+                <p>
+                  <u>CẢM THỨC</u><br>
+                  <b>Working far away in European Fields</b>
+                </p>
+                <p>
+                  <u>CẢM THỨC</u><br>
+                  <b>Working far away in European Fields</b>
+                </p>
+                <p>
+                  <u>CẢM THỨC</u><br>
+                  <b>Working far away in European Fields</b>
+                </p>
+                <p>
+                  <u>CẢM THỨC</u><br>
+                  <b>Working far away in European Fields</b>
+                </p>
 
-  <?php endif; ?>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <?php the_gridtop_item() ?>
+
+  </div>
 </div>
 
-<?php get_sidebar(); ?>
+<!-- MAIN -->
+<main class="container container-xs load-more-container">
+  <!-- SECTION 1: -->
+  <?php the_vertical_thumbnail_row() ?>
+
+  <!-- SECTION 2: Videos -->
+  <div class="row section2">
+  </div>
+
+  <!-- SECTION 3: 3 horizon, shortnews -->
+  <div class="row section3">
+    <div class="col-sm-8">
+      <?php the_horizontal_thumbnail()?>
+      <?php the_horizontal_thumbnail()?>
+      <?php the_horizontal_thumbnail()?>
+    </div>
+    <div class="col-sm-4">
+    </div>
+  </div>
+
+  <div class="section4">
+    <?php the_banner_post()?>
+  </div>
+
+  <!-- SECTION 5: 3 vertical -->
+  <?php the_vertical_thumbnail_row() ?>
+
+  <!-- SECTION 6: 3 horizon -->
+  <div class="row section6">
+    <div class="col-sm-4">
+    </div>
+    <div class="col-sm-8">
+      <?php the_horizontal_thumbnail() ?>
+      <?php the_horizontal_thumbnail() ?>
+      <?php the_horizontal_thumbnail() ?>
+    </div>
+  </div>
+  <!-- SECTION 7: 3 vertical, pattern for load more -->
+  <?php the_vertical_thumbnail_row() ?>
+
+
+</main>
 
 <?php get_footer(); ?>
 

@@ -67,3 +67,156 @@ function versioned_resource($relative_url){
 
   return $relative_url.$file_version;
 }
+// Enable post thumbnail - featured image
+add_theme_support( 'post-thumbnails' );
+
+// The gridtop item: ratio 1:1
+function the_gridtop_item() {
+    if (have_posts()):
+        the_post();
+        ?>
+       <div class="col-lg-15 col-sm-3 no-padding">
+           <a href="<?php the_permalink() ?>" class="display-block background-size-position ratio-1-1"
+              style="background-image: url(<?php the_post_thumbnail_url('large') ?>);">
+               <div class="background-dark index-gridtop-item-dark">
+                   <div class="index-gridtop-item-inner">
+                       <div class="index-gridtop-item-table">
+                           <div class="index-gridtop-item-cell text-white">
+                               <div class="index-gridtop-item-category">
+                                   <?php
+                                       $category = get_the_category( get_the_ID() );
+                                       echo $category[0]->cat_name;
+                                   ?>
+                               </div>
+                               <div class="text-big-bold"><?php the_title() ?></div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </a>
+       </div>
+       <?php
+    endif;
+}
+
+// The gridtop item: ratio-2-1
+function the_gridtop_item_2() {
+    if (have_posts()):
+        the_post();
+        ?>
+        <div class="col-lg-25 col-sm-6 no-padding">
+            <a href="#" class="display-block background-size-position ratio-2-1"
+               style="background-image: url(<?php the_post_thumbnail_url('large') ?>);">
+                <div class="background-dark index-gridtop-item-dark">
+                    <div class="index-gridtop-item-inner">
+                        <div class="index-gridtop-item-table">
+                            <div class="index-gridtop-item-cell text-white">
+                                <div class="index-gridtop-item-category">
+                                    <?php
+                                    $category = get_the_category( get_the_ID() );
+                                    echo $category[0]->cat_name;
+                                    ?>
+                                </div>
+                                <div class="text-big-bold"><?php the_title() ?></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <?php
+    endif;
+}
+
+// The vertical thumbnail
+function the_vertical_thumbnail($showCategoryAndComment = true) {
+    if (have_posts()):
+        the_post();
+        ?>
+            <div class="col-sm-4 one-post" >
+                <div>
+                    <?php if ($showCategoryAndComment): ?>
+                    <div class="row">
+                        <div class="col-xs-6 text-orange text-uppercase"><?php echo get_the_category(get_the_ID())[0]->cat_name ?></div>
+                        <div class="col-xs-6 text-align-right"><?php ?> COMMENT</div>
+                    </div>
+                    <?php endif; ?>
+                    <a href="<?php the_permalink() ?>" class="display-block background-size-position ratio-16-9"
+                       style="background-image: url(<?php echo get_the_post_thumbnail_url('large') ?>)"></a>
+                    <div>
+                        <a href="<?php the_permalink() ?>"><b><?php the_title() ?></b></a>
+                        <p>
+                            by <span class="text-orange"><?php the_author() ?></span>, <?php the_time('d/m/Y') ?>
+                        </p>
+                        <p>
+                            <?php the_excerpt() ?>
+                        </p>
+                    </div>
+                </div>
+            </div>
+       <?php
+    endif;
+}
+// The vertical thumbnail row
+function the_vertical_thumbnail_row($showCategoryAndContent = true) {
+    ?>
+    <div class="row margin-top-20px one-post-row">
+    <?php
+        $count = 0;
+        while(have_posts() && $count<3):
+            the_vertical_thumbnail($showCategoryAndContent);
+            $count ++;
+            endwhile;
+    ?>
+    </div>
+    <?php
+}
+
+// The horizontal thumbnail
+function the_horizontal_thumbnail() {
+    if (have_posts()):
+        the_post();
+        ?>
+            <div>
+                <div class="row">
+                  <div class="col-xs-6 text-orange text-uppercase"><?php echo get_the_category()[0]->cat_name ?></div>
+                  <div class="col-xs-6 text-align-right"><?php ?> COMMENTS</div>
+                </div>
+                <div class="row margin-top-10px">
+                  <div class="col-sm-6">
+                    <a href="<?php the_permalink() ?>"
+                       class="display-block background-size-position ratio-16-9"
+                       style="background-image: url(<?php the_post_thumbnail_url('large')?>)">
+                    </a>
+                  </div>
+                  <div class="col-sm-6">
+                    <div>
+                      <a href="<?php the_permalink() ?>" class="text-big-bold"><?php the_title() ?></a>
+                      <div><small>by <span class="text-orange"><?php the_author() ?></span>, <?php the_time('d/m/Y') ?></small></div>
+                      <div>
+                          <?php the_excerpt() ?>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+       <?php
+   endif;
+}
+
+// The banner news
+function the_banner_post() {
+    if (have_posts()):
+        the_post();
+        ?>
+           <div class="background-size-position ratio-3-1"
+                style="background-image: url(<?php the_post_thumbnail_url() ?>)">
+               <div class="mask gradient-bottom-black"></div>
+               <div class="text-cover-bottom-left text-white">
+                   <div class="text-big-bold"><?php the_title() ?></div>
+                   <div>by <span class="text-orange"><?php the_author() ?></span>, <?php the_time('d/m/Y') ?></div>
+               </div>
+           </div>
+        <?php
+    endif;
+}
