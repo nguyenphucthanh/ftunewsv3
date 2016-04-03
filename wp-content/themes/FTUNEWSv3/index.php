@@ -31,35 +31,8 @@ if (have_posts()):
     <?php the_gridtop_item('col-lg-15 col-sm-3 col-xs-6 no-padding',
         'display-block background-size-position ratio-1-1') ?>
 
-    <!-- editor's choice -->
-    <div class="col-lg-15 col-sm-6 col-xs-6 no-padding">
-      <div class="ratio-1-1 ratio-2-1-md ratio-1-1-xs">
-        <div class="index-gridtop-item-dark" style="background-color:#ED1C24;">
-          <div class="index-gridtop-item-inner">
-            <div class="index-gridtop-item-table">
-              <div class="index-gridtop-item-cell text-white">
-                <div class="index-gridtop-editor-choice">
-                  EDITOR'S CHOICE
-                </div>
-                <div class="editor-choice-item">
-                  <div class="editor-choice-category">CẢM THỨC</div>
-                  <div class="editor-choice-title">Working far awarking far awarking far awarking far awarking far awa</div>
-                </div>
-                <div class="editor-choice-item">
-                  <div class="editor-choice-category">CẢM THỨC</div>
-                  <div class="editor-choice-title">Working far awarking far awarking far awarking far awa</div>
-                </div>
-                <div class="editor-choice-item">
-                  <div class="editor-choice-category">CẢM THỨC</div>
-                  <div class="editor-choice-title">Working far awarking far awarking far awa</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
+    <?php the_gridtop_item('col-lg-15 col-sm-6 col-xs-6 no-padding',
+        'display-block background-size-position ratio-1-1 ratio-2-1-md ratio-1-1-xs') ?>
     <?php the_gridtop_item('col-lg-15 col-sm-6 col-xs-6 no-padding',
         'display-block background-size-position ratio-1-1 ratio-2-1-md ratio-1-1-xs') ?>
 

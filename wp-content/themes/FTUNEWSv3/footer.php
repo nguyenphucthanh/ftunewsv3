@@ -9,49 +9,57 @@
   <footer class="container no-padding">
       <div class="text-white background-black">
         <div class="row">
+
           <div class="col-md-3">
-            <h1 class="footer-ftunews">FTUNEWS</h1>
-            <div class="input-group">
-              <input type="text" class="form-control no-border-radius" placeholder="Search for article & more">
-                          <span class="input-group-btn">
-                              <button class="btn btn-default no-border-radius" type="button" ><span class="fa fa-search"></span></button>
-                          </span>
-            </div><!-- /input-group -->
+            <h1 class="footer-ftunews"><a href="<?php echo get_site_url() ?>">FTUNEWS</a></h1>
+            <form role="search" method="get" action="<?php echo get_site_url(),'/'; ?>">
+              <div class="input-group">
+                  <input type="text" class="form-control no-border-radius" placeholder="Search for article & more" name="s">
+                  <span class="input-group-btn">
+                      <button class="btn btn-default no-border-radius" type="submit" ><span class="fa fa-search"></span></button>
+                  </span>
+              </div><!-- /input-group -->
+            </form>
           </div>
-          <div class="col-md-3 margin-top-20px">
-            <a class="text-bold-orange" href="">điểm tin</a>
-            <a href="">bản tin sinh viên</a>
-            <a href="">tuyển sinh</a>
-            <br>
-            <a class="text-bold-orange" href="">chuyển động ftu2</a>
-            <a href="">FTUCharm 2016</a>
-            <a href="">người trẻ</a>
-            <a href="">FTUShine</a>
-            <br>
-            <a class="text-bold-orange" href="">phóng sự</a>
-            <a href="">phóng sự ảnh</a>
+
+
+          <?php
+          $args = array(
+              'hide_empty' => 0,
+              'parent' => 0,
+              'exclude' => '1',
+          );
+          $cats = get_categories($args);
+          $nCats = count($cats);
+          ?>
+          <div class="col-md-3 margin-top-20px footer-category">
+            <?php
+              for($i=0; $i<$nCats/2; $i++) {
+                $cat = $cats[$i];
+                ?>
+                <div><a href ="<?php echo get_site_url(),'/category/',$cat->slug ?>"><?php echo $cat->cat_name ?></a></div>
+                <?php
+              }
+            ?>
           </div>
-          <div class="col-md-3 margin-top-20px">
-            <a class="text-bold-orange" href="">hỗ trợ sinh viên</a>
-            <a href="">học bổng</a>
-            <a href="">nhà trọ</a>
-            <a href="">việc làm</a>
-            <br>
-            <a class="text-bold-orange" href="">cảm thức</a>
-            <a href="">cafe thư</a>
-            <br>
-            <a class="text-bold-orange" href="">vitamin biz</a>
-            <a href="">câu chuyện kinh doanh</a>
-            <a href="">menu giải trí</a>
+          <div class="col-md-3 margin-top-20px footer-category">
+            <?php
+            for($i=$nCats/2; $i<$nCats; $i++) {
+              $cat = $cats[$i];
+              ?>
+              <div><a href ="<?php echo get_site_url(),'/category/',$cat->slug ?>"><?php echo $cat->cat_name ?></a></div>
+              <?php
+            }
+            ?>
           </div>
-          <div class="col-md-3 margin-top-20px">
-            <a href="">contact us</a>
-            <a href="">advertise</a>
-            <a href="">privacy</a>
-            <a href="">terms of service</a>
-            <a href="">site map</a>
-            <a href="">help</a>
-            <a href="">subscription</a>
+          <div class="col-md-3 margin-top-20px text-white">
+              <div><a href="">contact us</a></div>
+              <div><a href="">advertise</a></div>
+              <div><a href="">privacy</a></div>
+              <div><a href="">terms of service</a></div>
+              <div><a href="">site map</a></div>
+              <div><a href="">help</a></div>
+              <div><a href="">subscription</a></div>
           </div>
         </div>
         <div class="footer-copy">

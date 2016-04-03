@@ -59,8 +59,8 @@
     <!-- header -->
     <header>
       <div class="container">
-        <div class="float-left display-none-xs" style="position:relative; margin-top:30px;">
-            <div class="header-ftunews" style="position: relative;">
+        <div class="float-left display-none-xs" style="margin-top:30px;">
+            <div class="header-ftunews">
               <a href="<?php echo get_site_url(); ?>">FTUNEWS</a>
             </div>
             <div class="vertical-line"></div>
@@ -91,12 +91,12 @@
                 ?>
               </div>
             </div>
-          <div class="vertical-line"></div>
-            <div class="header-social-box">
-              <div style="font-size:12px; margin-bottom:5px"><i>FOLLOW US ON</i></div>
+            <div class="header-social-box" style="float: right">
+              <div style="font-size:12px; margin-bottom:5px; font-style: italic">FOLLOW US ON</div>
               <a href="https://www.facebook.com/iloveftunews" class="fa fa-facebook header-social" style="margin-right:15px"></a>
               <a href="https://www.youtube.com/user/ftunews" class="fa fa-youtube header-social" ></a>
             </div>
+            <div class="vertical-line" style="float:right"></div>
         </div>
         <nav class="navbar navbar-default">
         <div class="navbar-header" style="position: relative">
@@ -132,5 +132,7 @@
       </div>
     </header>
     <div id="header-search-bar" class="header-search-bar">
-      <input type="text" class="header-search-bar-input" placeholder="Tìm kiếm...">
+      <form role="search" method="get" action="<?php echo get_site_url(),'/'; ?>">
+        <input type="text" class="header-search-bar-input" placeholder="Search for article & more" name="s">
+      </form>
     </div>

@@ -31,7 +31,7 @@ footer {
     padding-right:15px;
 }
 footer .background-black {
-    padding:0px 15px;
+    padding:0 15px;
 }
 nav {
     background:white;
@@ -49,13 +49,14 @@ a:visited {
 }
 a,
 a:hover,
-a:visited {
+a:visited,
+a:focus {
     text-decoration: none;
 }
-
+/*
 .container {
     max-width:840px;
-}
+}/**/
 .page-not-found-404 {
     width:100%;
     background: red;
@@ -119,9 +120,6 @@ button:focus,
 }
 .thumbnail-text-excerpt {
     margin-top:5px;
-}
-.thumbnail-row {
-    margin-top:40px;
 }
 
 
@@ -314,11 +312,11 @@ button:focus,
     width:240px;
     font-size:55px;
     line-height:55px;
-    font-family: utm_avoregular;
+    font-family: utm_avoregular, sans-serif;
 }
 .header-ftunews-collapsed {
     position: absolute;
-    left:0px;
+    left:0;
     bottom:8px;
     font-size: 40px;
     line-height: 40px;
@@ -352,7 +350,7 @@ button:focus,
 
 /* FOOTER */
 .footer-ftunews {
-    font-family: utm_avoregular;
+    font-family: utm_avoregular, sans-serif;
 }
 .footer-copy {
     text-align: right;
@@ -362,13 +360,12 @@ button:focus,
 footer {
     padding-top:34px;
 }
-footer a {
-    display:inline;
-    color:white;
+.footer-category {
+    font-size:16px;
+    font-weight: 600;
 }
-footer a::after {
-    content:"";
-    display:block;
+.footer-category div:first-letter {
+    text-transform: uppercase;
 }
 
 /***** Index *****/
@@ -376,6 +373,7 @@ footer a::after {
     width: 1px;
     height:20px;
     border-right:solid 1px rgb(225,225,225);
+    padding:0;
     margin: 15px 8px 0 8px;
 }
 .label-trending {
@@ -399,7 +397,7 @@ footer a::after {
     width:420px;
     margin-top:5px;
 }
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 991px) {
     .trending-container {
         width:300px;
     }
@@ -426,7 +424,9 @@ footer a::after {
     color:yellow;
     cursor: pointer;
 }
-
+.header-social-box {
+    float:right;
+}
 .header-social-box .fa {
     color:black;
 }
@@ -460,7 +460,7 @@ footer a::after {
     text-decoration: none;
 }
 .carousel .controller .fa-angle-up {
-    line-height: 0px;
+    line-height: 0;
 }
 .carousel .controller .fa:active {
     text-decoration: none;
@@ -510,7 +510,7 @@ footer a::after {
     display:inline-block;
     background:white;
     color:red;
-    padding:5px 5px 0px 5px;
+    padding:5px 5px 0 5px;
     font-weight: bold;
     margin-bottom: 15px;
 }
@@ -547,6 +547,9 @@ footer a::after {
 .section4 {
     position:relative;
 }
+.section-gap {
+    margin-top:40px;
+}
 
 .short-news-height {
     height:512px;
@@ -580,11 +583,6 @@ footer a::after {
     }
 /*----------------------------*/
 /* Single */
-@media screen and (max-width: 767px) {
-    .single-main {
-        margin-top:0;
-    }
-}
 .single-bigpic {
     padding:0; height: 56.25em;
     background-position: center;
@@ -617,27 +615,39 @@ footer a::after {
         padding-bottom:2px;
         border-bottom: solid 1px white;
         display:inline-block;
-        margin: 0 auto;
-    }
-    .single-details {
-        font-family:"Noto Serif";
-        font-size:16px;
-        font-style: italic;
-        margin-top:40px;
     }
     .single-title {
+        margin-top:20px;
         text-transform: uppercase;
         font-weight: 600;
         font-size:36px;
         font-family: 'Kanit','Source Sans Pro', sans-serif;
     }
+    .single-details {
+        font-family:"Noto Serif", sans-serif;
+        font-size:16px;
+        font-style: italic;
+        margin-top:40px;
+    }
     .single-author {
         color: rgb(253,175,4);
+    }
+    .single-text-black {
+        color:black;
+    }
+    .single-text-black .single-category {
+        border-bottom-color: black;
     }
 
 .single-main {
     margin-top:-100px;
     background:white;
+    padding-bottom:50px;
+}
+@media screen and (max-width: 767px) {
+    .single-main {
+        margin-top:0;
+    }
 }
 .single-aside {
     text-align: center;
@@ -825,7 +835,7 @@ footer a::after {
     padding-bottom: 56.25%;
 }
 .no-border-radius {
-    border-radius: 0%;
+    border-radius: 0;
 }
 
 .display-block {
@@ -874,10 +884,19 @@ footer a::after {
 }
 
 .text-white,
-.text-white:visited,
+.text-white:visited {
+    color:white;
+}
+
+footer a,
 footer a:visited {
     color:white;
 }
+.text-orange a,
+.text-orange a:visited {
+    color:orange;
+}
+
 
 .text-cover-bottom-left{
     position:absolute;

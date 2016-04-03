@@ -13,15 +13,16 @@ get_header(); ?>
 <!-- first look -->
 <div class="container-fluid single-bigpic ratio-16-9"
      style="background-image: url(<?php
-      if (has_post_thumbnail()) {
-        the_post_thumbnail_url();
-      } else {
-        echo "https://unsplash.it/1024/768/?random"; // chơi lầy v~ =))
-      }
-     ?>);">
+     $has_thumb = true;
+     if (has_post_thumbnail()) the_post_thumbnail_url('large');
+     else {
+        $url = catch_that_image();
+        if (empty($url)) $has_thumb = false;
+        else echo $url;
+     } ?> );">
   <div class="single-table">
     <div class="single-tablecell">
-      <div class="single-posthead">
+    <div class="single-posthead <?php if (!$has_thumb) echo 'single-text-black'; ?>">
         <div class="single-category">
           <?php
             $category = get_the_category( get_the_ID() );
