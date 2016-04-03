@@ -136,7 +136,7 @@ function the_vertical_thumbnail($showCategoryAndComment = true) {
             <div>
                 <?php if ($showCategoryAndComment): ?>
                     <div class="row section-gap">
-                        <div class="col-xs-12 text-orange text-uppercase">
+                        <div class="col-xs-12 thumbnail-category">
                         <?php
                         $cats = get_the_category( get_the_ID() );
                         if (!empty($cats)):
@@ -207,7 +207,7 @@ function the_horizontal_thumbnail() {
         ?>
         <div>
             <div class="row">
-                <div class="col-xs-6 text-orange text-uppercase">
+                <div class="col-xs-6 thumbnail-category">
                     <?php
                     $cats = get_the_category( get_the_ID() );
                     if (! empty($cats)):

@@ -50,7 +50,7 @@ if (have_posts()):
         <?php
         the_vertical_thumbnail_rows(false, 3);
 
-else: echo "no post";
+else: echo "no posts.";
 endif;
 ?>
 </main>

@@ -12,7 +12,7 @@ get_header();
   <!-- category name -->
   <div class="background-dark-gray">
     <div class="container text-category-name">
-      <?php single_cat_title() ?>
+      <div><?php single_cat_title() ?></div>
     </div>
   </div>
 
@@ -23,7 +23,7 @@ get_header();
     if (have_posts()):
       the_vertical_thumbnail_rows(false, 3);
 
-    else: echo "no post";
+    else: echo "no posts.";
     endif;
     ?>
   </main>
