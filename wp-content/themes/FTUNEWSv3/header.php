@@ -125,7 +125,7 @@
                 ?>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="javascript:$('#header-search-bar').slideToggle();">search</a></li>
+              <li><a href="javascript:jQuery('#header-search-bar').slideToggle();">search</a></li>
             </ul>
           </div>
       </nav>

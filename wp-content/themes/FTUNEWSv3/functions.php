@@ -104,10 +104,17 @@ function the_gridtop_item($divClass = '', $aClass = '') {
                        <div class="index-gridtop-item-table">
                            <div class="index-gridtop-item-cell text-white">
                                <div class="index-gridtop-item-category">
-                                   <?php
-                                       $category = get_the_category( get_the_ID() );
-                                       echo $category[0]->cat_name;
-                                   ?>
+                                  <?php
+                                      $categories = get_the_category(get_the_ID());
+                                      $separator = ', ';
+                                      $output = '';
+                                      if(!empty($categories)) {
+                                        foreach( $categories as $category ) {
+                                            $output .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a>' . $separator;
+                                        }
+                                        echo trim( $output, $separator );
+                                      }
+                                  ?>
                                </div>
                                <div class="text-big-bold"><?php the_title() ?></div>
                            </div>
@@ -135,7 +142,19 @@ function the_vertical_thumbnail($showCategoryAndComment = true) {
                 <div>
                     <?php if ($showCategoryAndComment): ?>
                     <div class="row thumbnail-row">
-                        <div class="col-xs-6 text-orange text-uppercase"><?php echo get_the_category(get_the_ID())[0]->cat_name ?></div>
+                        <div class="col-xs-6 text-orange text-uppercase">
+                            <?php
+                                $categories = get_the_category(get_the_ID());
+                                $separator = ', ';
+                                $output = '';
+                                if(!empty($categories)) {
+                                  foreach( $categories as $category ) {
+                                      $output .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a>' . $separator;
+                                  }
+                                  echo trim( $output, $separator );
+                                }
+                            ?>
+                        </div>
                     </div>
                     <?php endif; ?>
                     <a href="<?php the_permalink() ?>" class="display-block background-size-position ratio-16-9"
@@ -198,7 +217,19 @@ function the_horizontal_thumbnail() {
         ?>
             <div>
                 <div class="row">
-                  <div class="col-xs-6 text-orange text-uppercase"><?php echo get_the_category()[0]->cat_name ?></div>
+                  <div class="col-xs-6 text-orange text-uppercase">
+                      <?php
+                          $categories = get_the_category(get_the_ID());
+                          $separator = ', ';
+                          $output = '';
+                          if(!empty($categories)) {
+                            foreach( $categories as $category ) {
+                                $output .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a>' . $separator;
+                            }
+                            echo trim( $output, $separator );
+                          }
+                      ?>
+                  </div>
                 </div>
                 <div class="row margin-top-10px">
                   <div class="col-sm-6">
