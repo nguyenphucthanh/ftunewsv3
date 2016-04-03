@@ -2,61 +2,62 @@
 /**
  * @package WordPress
  * @subpackage HTML5_Boilerplate
+ * @file footer.php
  */
 ?>
   <!-- footer -->
-  <footer class="container container-xs">
-    <div class="text-white background-black">
-      <div class="row">
-        <div class="col-md-3">
-          <h1 class="footer-ftunews">FTUNEWS</h1>
-          <div class="input-group">
-            <input type="text" class="form-control no-border-radius" placeholder="Search for article & more">
-                                  <span class="input-group-btn">
-                                      <button class="btn btn-default no-border-radius" type="button" >Go!</button>
-                                  </span>
-          </div><!-- /input-group -->
+  <footer class="container no-padding">
+      <div class="text-white background-black">
+        <div class="row">
+          <div class="col-md-3">
+            <h1 class="footer-ftunews">FTUNEWS</h1>
+            <div class="input-group">
+              <input type="text" class="form-control no-border-radius" placeholder="Search for article & more">
+                          <span class="input-group-btn">
+                              <button class="btn btn-default no-border-radius" type="button" ><span class="fa fa-search"></span></button>
+                          </span>
+            </div><!-- /input-group -->
+          </div>
+          <div class="col-md-3 margin-top-20px">
+            <a class="text-bold-orange" href="">điểm tin</a>
+            <a href="">bản tin sinh viên</a>
+            <a href="">tuyển sinh</a>
+            <br>
+            <a class="text-bold-orange" href="">chuyển động ftu2</a>
+            <a href="">FTUCharm 2016</a>
+            <a href="">người trẻ</a>
+            <a href="">FTUShine</a>
+            <br>
+            <a class="text-bold-orange" href="">phóng sự</a>
+            <a href="">phóng sự ảnh</a>
+          </div>
+          <div class="col-md-3 margin-top-20px">
+            <a class="text-bold-orange" href="">hỗ trợ sinh viên</a>
+            <a href="">học bổng</a>
+            <a href="">nhà trọ</a>
+            <a href="">việc làm</a>
+            <br>
+            <a class="text-bold-orange" href="">cảm thức</a>
+            <a href="">cafe thư</a>
+            <br>
+            <a class="text-bold-orange" href="">vitamin biz</a>
+            <a href="">câu chuyện kinh doanh</a>
+            <a href="">menu giải trí</a>
+          </div>
+          <div class="col-md-3 margin-top-20px">
+            <a href="">contact us</a>
+            <a href="">advertise</a>
+            <a href="">privacy</a>
+            <a href="">terms of service</a>
+            <a href="">site map</a>
+            <a href="">help</a>
+            <a href="">subscription</a>
+          </div>
         </div>
-        <div class="col-md-3 margin-top-20px">
-          <a class="text-bold-orange" href="">điểm tin</a>
-          <a href="">bản tin sinh viên</a>
-          <a href="">tuyển sinh</a>
-          <br>
-          <a class="text-bold-orange" href="">chuyển động ftu2</a>
-          <a href="">FTUCharm 2016</a>
-          <a href="">người trẻ</a>
-          <a href="">FTUShine</a>
-          <br>
-          <a class="text-bold-orange" href="">phóng sự</a>
-          <a href="">phóng sự ảnh</a>
-        </div>
-        <div class="col-md-3 margin-top-20px">
-          <a class="text-bold-orange" href="">hỗ trợ sinh viên</a>
-          <a href="">học bổng</a>
-          <a href="">nhà trọ</a>
-          <a href="">việc làm</a>
-          <br>
-          <a class="text-bold-orange" href="">cảm thức</a>
-          <a href="">cafe thư</a>
-          <br>
-          <a class="text-bold-orange" href="">vitamin biz</a>
-          <a href="">câu chuyện kinh doanh</a>
-          <a href="">menu giải trí</a>
-        </div>
-        <div class="col-md-3 margin-top-20px">
-          <a href="">contact us</a>
-          <a href="">advertise</a>
-          <a href="">privacy</a>
-          <a href="">terms of service</a>
-          <a href="">site map</a>
-          <a href="">help</a>
-          <a href="">subscription</a>
+        <div class="footer-copy">
+          &copy; 2016 FTUNEWS
         </div>
       </div>
-      <div class="footer-copy">
-        &copy; 2016 FTUNEWS
-      </div>
-    </div>
   </footer>
 
 
@@ -88,7 +89,7 @@
   <?php wp_footer(); ?>
 
   <script src="<?php echo get_template_directory_uri(); ?>/html5-boilerplate/slick/slick.min.js"></script>
-  <script src="<?php echo get_template_directory_uri(); ?>/html5-boilerplate/js/ftunews.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/ftunews.js"></script>
 
 </body>
 </html>

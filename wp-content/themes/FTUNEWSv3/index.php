@@ -2,109 +2,130 @@
 /**
  * @package WordPress
  * @subpackage HTML5_Boilerplate
+ * @file index.php
  */
 
 get_header();
 
-$args = array (
-  'posts_per_page'=> 24,
-  'order' => 'DESC',
-  'orderby' => 'date'
-);
-query_posts($args);
-
+the_load_more_pattern();
+if (have_posts()):
+  $cont = true; // continuing flag
 ?>
 
 
 <!-- first look/ grid top -->
-<div class="container-fluid container-xs">
+<div class="container-fluid ">
   <div class="row">
+    <?php the_gridtop_item('col-lg-15 col-sm-3 col-xs-12 no-padding',
+        'display-block background-size-position ratio-1-1 ratio-2-1-xs') ?>
+    <?php the_gridtop_item('col-lg-25 col-sm-6 col-xs-6 no-padding',
+        'display-block background-size-position ratio-2-1 ratio-1-1-xs') ?>
+    <?php the_gridtop_item('col-lg-15 col-sm-3 col-xs-6 no-padding',
+        'display-block background-size-position ratio-1-1') ?>
+    <?php the_gridtop_item('col-lg-15 col-sm-3 col-xs-6 no-padding',
+        'display-block background-size-position ratio-1-1') ?>
+    <?php the_gridtop_item('col-lg-15 col-sm-3 col-xs-6 no-padding',
+        'display-block background-size-position ratio-1-1') ?>
+    <?php the_gridtop_item('col-lg-15 col-sm-3 col-xs-6 no-padding',
+        'display-block background-size-position ratio-1-1') ?>
+    <?php the_gridtop_item('col-lg-15 col-sm-3 col-xs-6 no-padding',
+        'display-block background-size-position ratio-1-1') ?>
 
-    <?php the_gridtop_item() ?>
-    <?php the_gridtop_item_2() ?>
-    <?php the_gridtop_item() ?>
-    <?php the_gridtop_item() ?>
-    <?php the_gridtop_item() ?>
-    <?php the_gridtop_item() ?>
-    <?php the_gridtop_item() ?>
-
-    <div class="col-lg-15 col-sm-4 no-padding">
-      <div href="#" class="ratio-1-1">
-        <div class="index-gridtop-item-dark" style="background-color:red;">
+    <!-- editor's choice -->
+    <div class="col-lg-15 col-sm-6 col-xs-6 no-padding">
+      <div class="ratio-1-1 ratio-2-1-md ratio-1-1-xs">
+        <div class="index-gridtop-item-dark" style="background-color:#ED1C24;">
           <div class="index-gridtop-item-inner">
             <div class="index-gridtop-item-table">
               <div class="index-gridtop-item-cell text-white">
-                <div class="index-gridtop-editor-choice">EDITOR'S CHOICE</div>
-                <p>
-                  <u>CẢM THỨC</u><br>
-                  <b>Working far away in European Fields</b>
-                </p>
-                <p>
-                  <u>CẢM THỨC</u><br>
-                  <b>Working far away in European Fields</b>
-                </p>
-                <p>
-                  <u>CẢM THỨC</u><br>
-                  <b>Working far away in European Fields</b>
-                </p>
-                <p>
-                  <u>CẢM THỨC</u><br>
-                  <b>Working far away in European Fields</b>
-                </p>
-
+                <div class="index-gridtop-editor-choice">
+                  EDITOR'S CHOICE
+                </div>
+                <div class="editor-choice-item">
+                  <div class="editor-choice-category">CẢM THỨC</div>
+                  <div class="editor-choice-title">Working far awarking far awarking far awarking far awarking far awa</div>
+                </div>
+                <div class="editor-choice-item">
+                  <div class="editor-choice-category">CẢM THỨC</div>
+                  <div class="editor-choice-title">Working far awarking far awarking far awarking far awa</div>
+                </div>
+                <div class="editor-choice-item">
+                  <div class="editor-choice-category">CẢM THỨC</div>
+                  <div class="editor-choice-title">Working far awarking far awarking far awa</div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <?php the_gridtop_item() ?>
+
+    <?php the_gridtop_item('col-lg-15 col-sm-6 col-xs-6 no-padding',
+        'display-block background-size-position ratio-1-1 ratio-2-1-md ratio-1-1-xs') ?>
 
   </div>
 </div>
 
 <!-- MAIN -->
-<main class="container container-xs load-more-container">
-  <!-- SECTION 1: -->
-  <?php the_vertical_thumbnail_row() ?>
+<main class="container load-more-container">
+    <!-- SECTION 1: -->
+    <?php
+      if ($cont)
+        $cont = $cont && the_vertical_thumbnail_row();
+    ?>
 
-  <!-- SECTION 2: Videos -->
-  <div class="row section2">
-  </div>
-
-  <!-- SECTION 3: 3 horizon, shortnews -->
-  <div class="row section3">
-    <div class="col-sm-8">
-      <?php the_horizontal_thumbnail()?>
-      <?php the_horizontal_thumbnail()?>
-      <?php the_horizontal_thumbnail()?>
+    <!-- SECTION 2: Videos -->
+    <div class="row section2">
     </div>
-    <div class="col-sm-4">
+
+    <!-- SECTION 3: 3 horizon, shortnews -->
+    <div class="row section3">
+      <div class="col-sm-8">
+        <?php
+          if ($cont)
+            for($i = 0; $i<3 && ($cont = $cont && the_horizontal_thumbnail()); $i++);
+        ?>
+      </div>
+      <div class="col-sm-4">
+      </div>
     </div>
-  </div>
 
-  <div class="section4">
-    <?php the_banner_post()?>
-  </div>
-
-  <!-- SECTION 5: 3 vertical -->
-  <?php the_vertical_thumbnail_row() ?>
-
-  <!-- SECTION 6: 3 horizon -->
-  <div class="row section6">
-    <div class="col-sm-4">
+    <div class="section4">
+      <?php
+        if ($cont)
+          $cont = $cont && the_banner_post();
+      ?>
     </div>
-    <div class="col-sm-8">
-      <?php the_horizontal_thumbnail() ?>
-      <?php the_horizontal_thumbnail() ?>
-      <?php the_horizontal_thumbnail() ?>
+
+    <!-- SECTION 5: 3 vertical -->
+    <?php
+      if ($cont)
+        $cont = $cont && the_vertical_thumbnail_row();
+    ?>
+
+    <!-- SECTION 6: 3 horizon -->
+    <div class="row section6">
+      <div class="col-sm-4">
+      </div>
+      <div class="col-sm-8">
+        <?php
+          if ($cont)
+            for($i = 0; $i<3 && ($cont = $cont && the_horizontal_thumbnail()); $i++);
+        ?>
+      </div>
     </div>
-  </div>
-  <!-- SECTION 7: 3 vertical, pattern for load more -->
-  <?php the_vertical_thumbnail_row() ?>
 
-
+    <!-- SECTION 7: -->
+    <?php
+      if ($cont)
+        $cont = $cont && the_vertical_thumbnail_row();
+    ?>
 </main>
+
+<?php
+else: echo "no posts.";
+endif;
+?>
 
 <?php get_footer(); ?>
 

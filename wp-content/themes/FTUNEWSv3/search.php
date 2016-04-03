@@ -2,30 +2,31 @@
 /**
  * @package WordPress
  * @subpackage HTML5_Boilerplate
+ * @file: category.php
  */
 
 get_header();
 
 ?>
 
-
-
   <!-- category name -->
-  <div class="container-fluid background-dark-gray">
+  <div class="background-dark-gray">
     <div class="container text-category-name">
       <?php the_search_query() ?>
     </div>
   </div>
 
   <!-- main -->
-  <main class="container container-xs load-more-container">
-    <!-- vertical thumbnails -->
+  <main class="container load-more-container">
     <?php
-    $count = 0;
-    while(have_posts() && $count<3):
-      the_vertical_thumbnail_row(false);
-      $count++;
-    endwhile;
+    the_load_more_pattern();
+    if (have_posts()):
+      the_vertical_thumbnail_rows(false, 3);
+      ?>
+
+      <?php
+    else: echo "no post";
+    endif;
     ?>
   </main>
 

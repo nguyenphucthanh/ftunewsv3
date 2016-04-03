@@ -8,13 +8,26 @@ $(document).ready(function() {
 		slidesToShow: 3,
 		slidesToScroll: 1,
 		prevArrow: $('.related-back'),
-		nextArrow: $('.related-next')
+		nextArrow: $('.related-next'),
+		responsive: [
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 2,
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1,
+				}
+			},
+		]
 	});
 	//Trending
 	$('.trending-slick').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		vertical: true,
 		prevArrow: $('.trending-prev'),
 		nextArrow: $('.trending-next'),
 	});
@@ -24,6 +37,8 @@ $(document).ready(function() {
 	t.find('.category-thumbnail-vertical-content').html("This is a clone.");
 
 	t.appendTo($('#posts-container'));
+
+
+
+
 });
-
-

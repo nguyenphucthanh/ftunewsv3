@@ -2,6 +2,7 @@
 /**
  * @package WordPress
  * @subpackage HTML5_Boilerplate
+ * @file functions.php
  */
 
 // Custom HTML5 Comment Markup
@@ -70,13 +71,33 @@ function versioned_resource($relative_url){
 // Enable post thumbnail - featured image
 add_theme_support( 'post-thumbnails' );
 
-// The gridtop item: ratio 1:1
-function the_gridtop_item() {
+// Set posts per page
+add_action( 'pre_get_posts',  'set_posts_per_page'  );
+function set_posts_per_page( $query ) {
+
+    global $wp_the_query;
+
+    if ( ( ! is_admin() ) && ( $query === $wp_the_query ) && ( $query->is_home() ) ) {
+        $query->set( 'posts_per_page', 24 );
+    }
+    // Etc..
+
+    return $query;
+}
+
+/**
+ * Print one gridtop cell
+ * @param string $divClass
+ * @param string $aClass
+ * @return bool, anything has printed?
+ */
+function the_gridtop_item($divClass = '', $aClass = '') {
     if (have_posts()):
         the_post();
         ?>
-       <div class="col-lg-15 col-sm-3 no-padding">
-           <a href="<?php the_permalink() ?>" class="display-block background-size-position ratio-1-1"
+        <div class="<?php echo $divClass; ?>">
+           <a href="<?php the_permalink() ?>"
+              class="<?php echo $aClass; ?>"
               style="background-image: url(<?php the_post_thumbnail_url('large') ?>);">
                <div class="background-dark index-gridtop-item-dark">
                    <div class="index-gridtop-item-inner">
@@ -96,83 +117,81 @@ function the_gridtop_item() {
            </a>
        </div>
        <?php
+    else: return false;
     endif;
+    return true;
 }
 
-// The gridtop item: ratio-2-1
-function the_gridtop_item_2() {
-    if (have_posts()):
-        the_post();
-        ?>
-        <div class="col-lg-25 col-sm-6 no-padding">
-            <a href="#" class="display-block background-size-position ratio-2-1"
-               style="background-image: url(<?php the_post_thumbnail_url('large') ?>);">
-                <div class="background-dark index-gridtop-item-dark">
-                    <div class="index-gridtop-item-inner">
-                        <div class="index-gridtop-item-table">
-                            <div class="index-gridtop-item-cell text-white">
-                                <div class="index-gridtop-item-category">
-                                    <?php
-                                    $category = get_the_category( get_the_ID() );
-                                    echo $category[0]->cat_name;
-                                    ?>
-                                </div>
-                                <div class="text-big-bold"><?php the_title() ?></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <?php
-    endif;
-}
-
-// The vertical thumbnail
+/**
+ * Print one vthumb
+ * @param bool $showCategoryAndComment
+ * @return bool, anything has printed?
+ */
 function the_vertical_thumbnail($showCategoryAndComment = true) {
     if (have_posts()):
         the_post();
         ?>
-            <div class="col-sm-4 one-post" >
+            <div class="col-sm-4" >
                 <div>
                     <?php if ($showCategoryAndComment): ?>
-                    <div class="row">
+                    <div class="row thumbnail-row">
                         <div class="col-xs-6 text-orange text-uppercase"><?php echo get_the_category(get_the_ID())[0]->cat_name ?></div>
-                        <div class="col-xs-6 text-align-right"><?php ?> COMMENT</div>
                     </div>
                     <?php endif; ?>
                     <a href="<?php the_permalink() ?>" class="display-block background-size-position ratio-16-9"
-                       style="background-image: url(<?php echo get_the_post_thumbnail_url('large') ?>)"></a>
-                    <div>
-                        <a href="<?php the_permalink() ?>"><b><?php the_title() ?></b></a>
-                        <p>
+                       style="background-image: url(<?php the_post_thumbnail_url('large') ?>)"></a>
+
+                    <div class="thumbnail-text" >
+                        <a class="thumbnail-title" href="<?php the_permalink() ?>"><?php the_title() ?></a>
+                        <div class="thumbnail-text-small">
                             by <span class="text-orange"><?php the_author() ?></span>, <?php the_time('d/m/Y') ?>
-                        </p>
-                        <p>
+                        </div>
+                        <div class="thumbnail-text-excerpt">
                             <?php the_excerpt() ?>
-                        </p>
+                        </div>
                     </div>
                 </div>
             </div>
        <?php
+    else: return false;
     endif;
+    return true;
 }
-// The vertical thumbnail row
-function the_vertical_thumbnail_row($showCategoryAndContent = true) {
+
+/**
+ * Print one vthumb row
+ * @param bool $showCategoryAndComment
+ * @return bool, anything has printed?
+ */
+function the_vertical_thumbnail_row($showCategoryAndComment = true) {
     ?>
-    <div class="row margin-top-20px one-post-row">
+    <div class="row margin-top-20px">
     <?php
+        $res = true;
         $count = 0;
-        while(have_posts() && $count<3):
-            the_vertical_thumbnail($showCategoryAndContent);
-            $count ++;
-            endwhile;
+        while($count<3 && ($res=$res&&the_vertical_thumbnail($showCategoryAndComment))) {
+            $count++;
+        }
     ?>
     </div>
     <?php
+    return $res;
+}
+/**
+ * Print a number of vthumb rows
+ * @param bool $showCategoryAndComment
+ * @param int $nRows
+ * @return bool, anything has printed?
+ */
+function the_vertical_thumbnail_rows($showCategoryAndComment = true, $nRows = 1) {
+    $res = true; // have posts
+    for ($i = 0; $i<$nRows && ($res = $res && the_vertical_thumbnail_row($showCategoryAndComment)); $i++);
+    return $res;
 }
 
-// The horizontal thumbnail
+/**
+ * @return bool, anything has printed?
+ */
 function the_horizontal_thumbnail() {
     if (have_posts()):
         the_post();
@@ -180,7 +199,6 @@ function the_horizontal_thumbnail() {
             <div>
                 <div class="row">
                   <div class="col-xs-6 text-orange text-uppercase"><?php echo get_the_category()[0]->cat_name ?></div>
-                  <div class="col-xs-6 text-align-right"><?php ?> COMMENTS</div>
                 </div>
                 <div class="row margin-top-10px">
                   <div class="col-sm-6">
@@ -201,22 +219,46 @@ function the_horizontal_thumbnail() {
                 </div>
               </div>
        <?php
-   endif;
+    else: return false;
+    endif;
+    return true;
 }
 
-// The banner news
+/**
+ * @return bool, anything has printed?
+ */
 function the_banner_post() {
     if (have_posts()):
         the_post();
         ?>
-           <div class="background-size-position ratio-3-1"
+           <a href="<?php the_permalink() ?>" class="display-block background-size-position ratio-3-1"
                 style="background-image: url(<?php the_post_thumbnail_url() ?>)">
                <div class="mask gradient-bottom-black"></div>
                <div class="text-cover-bottom-left text-white">
                    <div class="text-big-bold"><?php the_title() ?></div>
                    <div>by <span class="text-orange"><?php the_author() ?></span>, <?php the_time('d/m/Y') ?></div>
                </div>
-           </div>
+           </a>
         <?php
+    else: return false;
+    endif;
+    return true;
+}
+
+/**
+ * hint: call it right before the main if (have_posts):
+ */
+function the_load_more_pattern() {
+    if (have_posts()):
+    ?>
+    <div style="display:none">
+        <div class="load-more-item">
+            <?php
+                the_vertical_thumbnail_rows(false, 3);
+            ?>
+        </div>
+    </div>
+    <?php
+    rewind_posts();
     endif;
 }

@@ -2,6 +2,7 @@
 /**
  * @package WordPress
  * @subpackage HTML5_Boilerplate
+ * @file header.php
  */
 ?>
 <!DOCTYPE html>
@@ -44,9 +45,10 @@
 
     <link href='https://fonts.googleapis.com/css?family=Roboto&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Noto+Serif&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
-
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Kanit:400,300,300italic,400italic,500,500italic,600,600italic,700,700italic,800,800italic&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
     <link href="<?php echo get_template_directory_uri(); ?>/html5-boilerplate/slick/slick.css" rel="stylesheet">
-    <link href="<?php echo get_template_directory_uri(); ?>/html5-boilerplate/css/ftunews.css" rel="stylesheet"/>
+    <link href="<?php echo get_template_directory_uri(); ?>/ftunews.css" rel="stylesheet"/>
 </head>
 <body <?php body_class(); ?>>
   <!--[if lt IE 7]>
@@ -57,61 +59,60 @@
     <!-- header -->
     <header>
       <div class="container">
-        <div class="row">
-          <div class="col-md-10 col-sm-9">
-            <div class="row">
-              <a href="<?php echo get_site_url(); ?>" class="display-block col-md-4 header-ftunews margin-top-20px">
-                FTUNEWS
-              </a>
-              <div class="col-md-8 margin-top-20px">
-                <div class="label-trending">
-                  <span class="trending-prev"><<</span> TRENDING <span class="trending-next">>></span>
+        <div class="float-left display-none-xs" style="position:relative; margin-top:30px;">
+            <div class="header-ftunews" style="position: relative;">
+              <a href="<?php echo get_site_url(); ?>">FTUNEWS</a>
+            </div>
+            <div class="vertical-line"></div>
+            <div class="trending-container">
+                <div class="float-left" style="height:20px">
+                  <div class="label-trending">
+                    TRENDING &nbsp;
+                  </div><div class="trending-prev fa fa-angle-left"></div><div class="trending-next fa fa-angle-right"></div>
                 </div>
                 <div class="trending-slick">
-                  <?php
-                  // Most view
-                    $args = array(
-                      'posts_per_page' => 5,
-                      'order' => 'DESC',
-                        'orderyby' => 'date'
-                    );
-                    query_posts($args);
-                    while (have_posts()):
-                      the_post();
-                  ?>
-                  <div>
-                    <a href="<?php the_permalink() ?>"><?php the_title() ?></a>
-                  </div>
-                  <?php
-                    endwhile;
-                    wp_reset_query();
-                  ?>
+                <?php
+                // Most view
+                  $args = array(
+                    'posts_per_page' => 5,
+                    'order' => 'DESC',
+                    'orderyby' => 'date'
+                  );
+                  query_posts($args);
+                  while (have_posts()):
+                    the_post();
+                ?>
+                <div>
+                  <a href="<?php the_permalink() ?>"><?php the_title() ?></a>
                 </div>
+                <?php
+                  endwhile;
+                  wp_reset_query();
+                ?>
               </div>
             </div>
-          </div>
-          <div class="col-md-2 col-sm-3 margin-top-20px header-social-box text-align-right">
-            <div>FOLLOW US ON</div>
-            <a href="https://www.facebook.com/iloveftunews" class="fa fa-facebook btn btn-link header-social"></a>
-            <a href="https://www.youtube.com/user/ftunews" class="fa fa-youtube btn btn-link header-social"></a>
-          </div>
+          <div class="vertical-line"></div>
+            <div class="header-social-box">
+              <div style="font-size:12px; margin-bottom:5px"><i>FOLLOW US ON</i></div>
+              <a href="https://www.facebook.com/iloveftunews" class="fa fa-facebook header-social" style="margin-right:15px"></a>
+              <a href="https://www.youtube.com/user/ftunews" class="fa fa-youtube header-social" ></a>
+            </div>
         </div>
-      </div>
-      <nav class="navbar navbar-default">
-        <div class="container container-fluid-sm">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
+        <nav class="navbar navbar-default">
+        <div class="navbar-header" style="position: relative">
+          <div class="header-ftunews-collapsed">
+            <a href="<?php echo get_site_url() ?>">FTUNEWS</a>
           </div>
-
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <button type="button" class="navbar-toggle collapsed btn-hamburger" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="fa fa-bars"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
               <?php
                 $args = array(
+                    'hide_empty' => 0,
                     'parent' => 0,
                     'exclude' => '1',
                 );
@@ -127,9 +128,9 @@
               <li><a href="javascript:$('#header-search-bar').slideToggle();">search</a></li>
             </ul>
           </div>
-        </div>
       </nav>
-      <div id="header-search-bar" class="header-search-bar">
-        <input type="text" class="header-search-bar-input" placeholder="Tìm kiếm...">
       </div>
     </header>
+    <div id="header-search-bar" class="header-search-bar">
+      <input type="text" class="header-search-bar-input" placeholder="Tìm kiếm...">
+    </div>

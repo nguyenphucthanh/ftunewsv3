@@ -2,16 +2,23 @@
 /**
  * @package WordPress
  * @subpackage HTML5_Boilerplate
+ * @file: single.php
  */
 
 get_header(); ?>
 
 
-<?php if (have_posts()) : the_post(); ?>
+<?php if (have_posts()) : while(have_posts()): the_post(); ?>
 
 <!-- first look -->
 <div class="container-fluid single-bigpic ratio-16-9"
-     style="background-image: url( <?php the_post_thumbnail_url(); ?>);">
+     style="background-image: url(<?php
+      if (has_post_thumbnail()) {
+        the_post_thumbnail_url();
+      } else {
+        echo "https://unsplash.it/1024/768/?random"; // chơi lầy v~ =))
+      }
+     ?>);">
   <div class="single-table">
     <div class="single-tablecell">
       <div class="single-posthead">
@@ -30,63 +37,50 @@ get_header(); ?>
   </div>
 </div>
 
-<main class="container container-xs single-main" >
+<main class="container single-main" >
   <div class="row">
-    <div class="col-md-2 single-aside margin-top-20px">
-      <!-- View count -->
-      <div class="border1 single-viewcount">
-        <div>Views</div>
-        <div style="font-size:20px"><b><?php //view count ?></b></div>
-      </div>
-      <div style="margin-top:12px;">Share on</div>
-      <div class="float-left single-aside-social">
-        <div class="border1" style="width:50%; margin: -1px;">
-            <img src="<?php echo get_template_directory_uri() ?>/images/btn-aside-facebook.png" alt="">
-        </div>
-        <div class="border1" style="width:50%; margin:-1px;">
-          <img src="<?php echo get_template_directory_uri() ?>/images/btn-aside-twitter.png" alt="">
-        </div>
-      </div>
-    </div>
-    <div class="col-md-8 margin-top-20px">
+    <div class="col-sm-2 single-aside margin-top-20px"></div>
+    <div class="col-sm-8 margin-top-20px">
       <div class="single-article">
-          <?php the_content('Read the rest of this entry &raquo;'); ?>
+          <?php the_content(); ?>
       </div>
     </div>
   </div>
-
+ 
   <!-- Related -->
   <div class="single-related">
     <div class="single-related-head">RELATED</div>
     <div class="row">
       <div class="col-md-2"></div>
       <div class="col-md-8 single-related-body">
-        <div class="single-related-slick" >
+        <div class="single-related-slick">
 
           <?php
             $tags = get_the_tags(); // array of objects
             if ($tags):
               $tagIDs = array();
               foreach ($tags as $tag) {
-                echo $tag->id;
+                $tagIDs[] = $tag->term_id;
               }
               $args = array(
                 'posts_per_page' => 10,
                 'tag__in' => $tagIDs,
                 'order' => 'DESC',
                 'orderby' => 'date',
-                'post__not_in' => array(get_the_ID()),
+                'post__not_in' => array($post->ID),
               );
               $queryRelated = new WP_Query($args);
+              //echo "cnt = ",count($queryRelated->posts),", ",$tagIDs[0],", ",$tagIDs[1];
+              if ($queryRelated->have_posts()):
               while ($queryRelated->have_posts()):
                 $queryRelated->the_post();
           ?>
           <div>
             <div class="single-related-item-outer">
-              <a href="" class="background-size-position single-related-item"
+              <a href="<?php the_permalink()?>" class="background-size-position single-related-item"
                  style="background-image: url(<?php the_post_thumbnail_url() ?>)">
                 <div class="background-dark single-related-item-dark">
-                  <div class="single-related-item-inner text-white text-big-bold">
+                  <div class="single-related-item-inner">
                     <?php the_title() ?>
                   </div>
                 </div>
@@ -95,17 +89,14 @@ get_header(); ?>
           </div>
           <?php
               endwhile;
+              else: echo "no related posts.";
               endif;
+              //wp_reset_query(); // what for??
+            endif;
           ?>
         </div>
-        <div class="row single-related-slick-control">
-          <div class="col-xs-6">
-            <button class="btn btn-warning related-back">Back</button>
-          </div>
-          <div class="col-xs-6 text-align-right">
-            <button class="btn btn-warning related-next">Next</button>
-          </div>
-        </div>
+        <div class="single-related-prev related-prev fa fa-angle-left"></div>
+        <div class="single-related-next related-next fa fa-angle-right"></div>
       </div>
     </div>
   </div>
@@ -115,13 +106,14 @@ get_header(); ?>
   </div>
 </main>
 
-<?php else: ?>
+<?php
+  endwhile;
+  else: ?>
 
   <p>No posts. :(</p>
 
 <?php endif; ?>
 
 
-</div>
 
 <?php get_footer(); ?>
