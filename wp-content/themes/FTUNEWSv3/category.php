@@ -12,7 +12,7 @@ get_header();
 <!-- category name -->
 <div class="background-dark-gray">
     <div class="container text-category-name">
-        <?php single_cat_title() ?>
+        <div><?php single_cat_title() ?></div>
     </div>
 </div>
 

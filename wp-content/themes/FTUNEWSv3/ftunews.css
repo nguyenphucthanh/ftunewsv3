@@ -567,7 +567,7 @@ footer {
     padding-top:10px;
     padding-bottom:10px;
 }
-.text-category-name:first-letter {
+div.text-category-name div:first-letter {
     text-transform: uppercase;
 }
 .category-thumbnail-fullwidth-content {
@@ -604,7 +604,7 @@ footer {
         vertical-align:middle;
         text-align: center;
         color:white;
-        background-color:rgba(0,0,0,0.5);
+        background-color:rgba(0,0,0,0.15);
     }
     .single-posthead {
         margin-top:-100px;
@@ -787,6 +787,9 @@ footer {
         display:none;
     }
 }
+.text-white {
+    color:white;
+}
 .text-uppercase {
     text-transform: uppercase;
 }
@@ -883,18 +886,14 @@ footer {
     padding: 0;
 }
 
-.text-white,
-.text-white:visited {
-    color:white;
-}
 
 footer a,
-footer a:visited {
+footer a:visited,
+footer a:hover,
+footer a:link,
+footer a:active,
+footer a:focus {
     color:white;
-}
-.text-orange a,
-.text-orange a:visited {
-    color:orange;
 }
 
 
