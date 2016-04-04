@@ -7,7 +7,7 @@ $(document).ready(function() {
 	$('.single-related-slick').slick({
 		slidesToShow: 3,
 		slidesToScroll: 1,
-		prevArrow: $('.related-back'),
+		prevArrow: $('.related-prev'),
 		nextArrow: $('.related-next'),
 		responsive: [
 			{

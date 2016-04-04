@@ -52,7 +52,7 @@ if (have_posts()):
     </div>
 
     <!-- SECTION 3: 3 horizon, shortnews -->
-    <div class="row section3">
+    <div class="row section3 section-gap">
       <div class="col-sm-8">
         <?php
           if ($cont)
@@ -77,7 +77,7 @@ if (have_posts()):
     ?>
 
     <!-- SECTION 6: 3 horizon -->
-    <div class="row section6">
+    <div class="row section6 section-gap">
       <div class="col-sm-4">
       </div>
       <div class="col-sm-8">

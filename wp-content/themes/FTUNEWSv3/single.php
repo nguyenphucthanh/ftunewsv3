@@ -79,7 +79,8 @@ get_header(); ?>
           <div>
             <div class="single-related-item-outer">
               <a href="<?php the_permalink()?>" class="background-size-position single-related-item"
-                 style="background-image: url(<?php the_post_thumbnail_url() ?>)">
+                 style="background-image: url(<?php if (has_post_thumbnail()) the_post_thumbnail_url('large');
+                 else echo catch_that_image(); ?>)">
                 <div class="background-dark single-related-item-dark">
                   <div class="single-related-item-inner">
                     <?php the_title() ?>

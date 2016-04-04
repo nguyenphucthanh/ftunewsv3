@@ -103,14 +103,14 @@ function the_gridtop_item($divClass = '', $aClass = '') {
                 <div class="background-dark index-gridtop-item-dark">
                     <div class="index-gridtop-item-inner">
                         <div class="index-gridtop-item-table">
-                            <div class="index-gridtop-item-cell text-white">
+                            <div class="index-gridtop-item-cell">
                                 <div class="index-gridtop-item-category">
                                     <?php
                                         $cats = get_the_category( get_the_ID() );
                                         if (! empty($cats)) echo $cats[0]->cat_name;
                                     ?>
                                 </div>
-                                <div class="text-big-bold"><?php the_title() ?></div>
+                                <div class="index-gridtop-item-title"><?php the_title() ?></div>
                             </div>
                         </div>
                     </div>

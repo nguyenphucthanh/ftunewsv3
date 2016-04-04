@@ -28,7 +28,8 @@ if (have_posts()):
         <div class="row">
             <div class="col-md-35 margin-top-20px">
                 <a href="<?php the_permalink() ?>" class="display-block background-size-position ratio-16-9"
-                   style="background-image: url(<?php the_post_thumbnail_url('large'); ?>)">
+                   style="background-image: url(<?php if (has_post_thumbnail()) the_post_thumbnail_url('large');
+                   else echo catch_that_image(); ?>)">
                 </a>
             </div>
             <div class="col-md-25 margin-top-20px">

@@ -18,10 +18,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
     <title><?php wp_title('&laquo;', true, 'right'); ?> <?php bloginfo('name'); ?></title>
-    
-    <meta name="description" content="">
-    <meta name="author" content="">
-    
+
     <meta name="viewport" content="width=device-width">
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -47,6 +44,7 @@
     <link href='https://fonts.googleapis.com/css?family=Noto+Serif&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Kanit:400,300,300italic,400italic,500,500italic,600,600italic,700,700italic,800,800italic&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+
     <link href="<?php echo get_template_directory_uri(); ?>/html5-boilerplate/slick/slick.css" rel="stylesheet">
     <link href="<?php echo get_template_directory_uri(); ?>/ftunews.css" rel="stylesheet"/>
 </head>
@@ -92,7 +90,7 @@
               </div>
             </div>
             <div class="header-social-box" style="float: right">
-              <div style="font-size:12px; margin-bottom:5px; font-style: italic">FOLLOW US ON</div>
+              <div class="header-follow-us">FOLLOW US ON</div>
               <a href="https://www.facebook.com/iloveftunews" class="fa fa-facebook header-social" style="margin-right:15px"></a>
               <a href="https://www.youtube.com/user/ftunews" class="fa fa-youtube header-social" ></a>
             </div>

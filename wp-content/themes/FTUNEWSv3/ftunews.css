@@ -17,7 +17,7 @@
 body {
     background-color:rgb(242,242,242);
     margin:00px;
-    font-family: 'Kanit', sans-serif;
+    font-family: 'Noto Serif', sans-serif;
     font-weight: 300;
 }
 main {
@@ -94,6 +94,7 @@ button:focus,
     border: solid 1px darkgrey;
     color: darkgrey;
     background:none;
+    margin-top:50px;
 }
 .thumbnail-vertical-height::after {
     content:"";
@@ -337,6 +338,13 @@ button:focus,
 .header-social {
     font-size:20px;
 }
+.header-follow-us {
+    margin-bottom:5px;
+    font-family: 'Open Sans', 'sans-serif';
+    font-size:14px;
+    font-weight: normal;
+    font-style: italic;
+}
 .header-search-bar {
     display: none;
     position: relative;
@@ -385,6 +393,8 @@ footer {
 .label-trending {
     background-color: rgb(234,143,28);
     color:white;
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal;
     font-style: italic;
     padding: 2px 0 0 5px;
     font-size:12px;
@@ -492,6 +502,8 @@ footer {
     right:15px;
     bottom: 18px;
     overflow: hidden;
+    font-family: 'Open Sans', sans-serif;
+    color:white;
 }
 .index-gridtop-item-table {
     display: table;
@@ -501,8 +513,6 @@ footer {
 .index-gridtop-item-cell {
     display: table-cell;
     vertical-align: bottom;
-    /*padding:15px;*/
-    /*padding:15px;*/
     height:100%;
 }
 .index-gridtop-item-category {
@@ -511,6 +521,11 @@ footer {
     display:inline-block;
     margin-bottom: 10px;
     text-transform: uppercase;
+}
+.index-gridtop-item-title {
+    font-size: 22px;
+    line-height: 25px;
+    font-weight: bold;
 }
 .index-gridtop-editor-choice {
     display:inline-block;
@@ -530,7 +545,7 @@ footer {
 }
 .editor-choice-title {
     font-weight:500;
-    font-family: 'Kanit', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size:16px;
     line-height:16px;
     max-height:32px;
@@ -554,7 +569,7 @@ footer {
     position:relative;
 }
 .section-gap {
-    margin-top:40px;
+    margin-top:50px;
 }
 
 .short-news-height {
@@ -617,17 +632,19 @@ div.text-category-name div:first-letter {
     }
     .single-category {
         font-size:20px;
-        font-family: 'Kanit', sans-serif;
-        padding-bottom:2px;
+        font-family: 'Open Sans', sans-serif;
         border-bottom: solid 1px white;
         display:inline-block;
+    }
+    .single-category:first-letter {
+        text-transform: uppercase;
     }
     .single-title {
         margin-top:20px;
         text-transform: uppercase;
         font-weight: 600;
         font-size:36px;
-        font-family: 'Kanit','Source Sans Pro', sans-serif;
+        font-family: 'Open Sans', sans-serif;
     }
     .single-details {
         font-family:"Noto Serif", sans-serif;
@@ -670,15 +687,12 @@ div.text-category-name div:first-letter {
     padding:24px;
 }
 .single-article {
-    /*
-    font-family: "Noto Serif";
-    font-size:18px;*/
     border-bottom:solid 1px silver;
     overflow: hidden;
     margin:0;
     padding:0;
     padding-bottom: 60px;
-    background:none;
+    font-size: 16px;
 }
 @media screen and (max-width: 767px) {
     .single-article-container {
@@ -736,9 +750,9 @@ div.text-category-name div:first-letter {
     right: -20px;
     font-size:50px;
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
     .single-related-prev,
-    .related-next.single-related-next {
+    .single-related-next {
         /*display:none;*/
         height:0;
         left:0;
@@ -764,8 +778,10 @@ div.text-category-name div:first-letter {
 }
 .navbar-collapse .navbar-nav li a {
     color:black;
-    font-size:12px;
-    padding:14px 22px 14px 00px;
+    font-family:'Open Sans', 'sans-serif';
+    font-size:14px;
+    font-weight: normal;
+    padding:15px 15px 15px 0;
     text-transform: uppercase;
 }
 .navbar-collapse .navbar-right li a {
