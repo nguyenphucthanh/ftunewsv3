@@ -156,7 +156,7 @@ function the_vertical_thumbnail($showCategoryAndComment = true) {
                         by <span class="text-orange"><?php the_author() ?></span>, <?php the_time('d/m/Y') ?>
                     </div>
                     <div class="thumbnail-text-excerpt">
-                        <?php the_excerpt() ?>
+                        <?php echo removeImageTags(get_the_excerpt()) ?>
                     </div>
                 </div>
             </div>
@@ -229,7 +229,7 @@ function the_horizontal_thumbnail() {
                         <a href="<?php the_permalink() ?>" class="text-big-bold"><?php the_title() ?></a>
                         <div><small>by <span class="text-orange"><?php the_author() ?></span>, <?php the_time('d/m/Y') ?></small></div>
                         <div>
-                            <?php the_excerpt() ?>
+                            <?php echo removeImageTags(get_the_excerpt()) ?>
                         </div>
                     </div>
                 </div>
@@ -298,4 +298,27 @@ function catch_that_image() {
     }
 /**/
     return $first_img;
+}
+
+/**
+ * remove all img tags
+ * @param string $s: input html
+ * @return string
+ */
+function removeImageTags($s = "") {
+    $res = "";
+    $add = true;
+    $len = strlen($s);
+    for ($i=0; $i<$len; $i++) {
+        // detect <img
+        if ($i<$len-4) {
+            $t = $s[$i] . $s[$i + 1] . $s[$i + 2] . $s[$i + 3];
+            if ($t=="<img") $add=false;
+        }
+        // append
+        if ($add==true) $res .= $s[$i];
+        //detect >
+        if ($s[$i]==">") $add=true;
+    }/**/
+    return $res;
 }

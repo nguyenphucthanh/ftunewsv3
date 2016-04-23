@@ -40,8 +40,8 @@ if (have_posts()):
                     <div class="thumbnail-text-small">
                         by <span class="text-orange"><?php the_author() ?></span>, <?php the_time('d/m/Y')?>
                     </div>
-                    <div class="thumbnail-text-exerpt">
-                        <?php the_excerpt() ?>
+                    <div class="thumbnail-text-excerpt">
+                        <?php echo removeImageTags(get_the_excerpt()) ?>
                     </div>
                 </div>
             </div>

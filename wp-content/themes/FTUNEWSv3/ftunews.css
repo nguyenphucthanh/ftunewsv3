@@ -126,7 +126,8 @@ button:focus,
     margin-top:5px;
 }
 .thumbnail-text-excerpt {
-    margin-top:5px;
+    margin-top: 5px;
+    overflow-x: hidden;
 }
 
 
