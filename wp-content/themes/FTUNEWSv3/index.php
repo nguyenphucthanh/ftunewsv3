@@ -60,6 +60,7 @@ if (have_posts()):
         ?>
       </div>
       <div class="col-sm-4">
+          <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/FK%20banner%20FTU2.jpg">
       </div>
     </div>
 
@@ -79,6 +80,9 @@ if (have_posts()):
     <!-- SECTION 6: 3 horizon -->
     <div class="row section6 section-gap">
       <div class="col-sm-4">
+          <div class="ratio-1-1" style="background: red; position: relative">
+              <embed style="position: absolute; top:0; left:0; width:100%; height: 100%" src="<?php echo get_template_directory_uri(); ?>/flash/PHN_350x340.swf"></embed>
+          </div>
       </div>
       <div class="col-sm-8">
         <?php
@@ -88,6 +92,9 @@ if (have_posts()):
       </div>
     </div>
 
+    <!--div class="ratio-1-1">
+        <embed width="100%" src="<?php echo get_template_directory_uri(); ?>/flash/PHN_350x340.swf"></embed>
+    </div-->
     <!-- SECTION 7: -->
     <?php
       if ($cont)
