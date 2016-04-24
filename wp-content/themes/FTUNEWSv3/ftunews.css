@@ -66,6 +66,30 @@ a:focus {
 .btn-link:hover {
     text-decoration: none;
 }
+/***** three dots at the end *****/
+.three-dots {
+    display: block;
+    /* Fallback for non-webkit */
+    display: -webkit-box;
+    /* Fallback for non-webkit */
+    font-size: 26px;
+    line-height: 1.4;
+    -webkit-line-clamp: 3; /* number of lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.trending-slick .slick-slide {
+    display: block;
+    /* Fallback for non-webkit */
+    display: -webkit-box;
+    /* Fallback for non-webkit */
+    -webkit-line-clamp: 1; /* number of lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
 /* Remove outlines when focus */
 input:focus,
@@ -490,7 +514,13 @@ footer {
     color:white;
 }
 /*-- /Carousel controller--*/
-
+.gridtop .gridtop-item {
+    border: solid 2px black;
+    margin: 0 -2px -2px 0;
+}
+.gridtop .gridtop-item.col-lg-25 {
+    margin-bottom:-4px;
+}
 .index-gridtop-item-dark {
     position: absolute;
     width:100%;
@@ -552,6 +582,7 @@ footer {
     max-height:32px;
     overflow: hidden;
 }
+
 /*
 .section1,
 .section2,
@@ -575,6 +606,16 @@ footer {
 
 .short-news-height {
     height:512px;
+}
+
+.banner-drthanh {
+    position: relative;
+    margin-top: 23px;
+}
+.banner-drthanh::after {
+    content:"";
+    display: block;
+    padding-bottom: 97%;
 }
 /*---- /Index ----*/
 
@@ -688,16 +729,19 @@ div.text-category-name div:first-letter {
     padding:24px;
 }
 .single-article {
-    border-bottom:solid 1px silver;
+    border-bottom: solid 1px silver;
     overflow: hidden;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     padding-bottom: 60px;
     font-size: 16px;
 }
 @media screen and (max-width: 767px) {
     .single-article-container {
         padding:0;
+    }
+    .single-article img {
+        width:100%;
     }
 }
 
@@ -883,10 +927,10 @@ div.text-category-name div:first-letter {
 }
 
 .background-dark {
-    background-color: rgba(0,0,0,0.15);
+    background-color: rgba(0,0,0,0.3);
 }
 .background-dark:hover {
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0,0.5);
 }
 .background-black {
     background: black;

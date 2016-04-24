@@ -15,31 +15,32 @@ if (have_posts()):
 
 <!-- first look/ grid top -->
 <div class="container-fluid ">
-  <div class="row">
-    <?php the_gridtop_item('col-lg-15 col-sm-3 col-xs-12 no-padding',
+  <div class="row gridtop">
+    <?php the_gridtop_item('col-lg-15 col-sm-3 col-xs-12 no-padding gridtop-item',
         'display-block background-size-position ratio-1-1 ratio-2-1-xs') ?>
-    <?php the_gridtop_item('col-lg-25 col-sm-6 col-xs-6 no-padding',
+    <?php the_gridtop_item('col-lg-25 col-sm-6 col-xs-6 no-padding gridtop-item',
         'display-block background-size-position ratio-2-1 ratio-1-1-xs') ?>
-    <?php the_gridtop_item('col-lg-15 col-sm-3 col-xs-6 no-padding',
+    <?php the_gridtop_item('col-lg-15 col-sm-3 col-xs-6 no-padding gridtop-item',
         'display-block background-size-position ratio-1-1') ?>
-    <?php the_gridtop_item('col-lg-15 col-sm-3 col-xs-6 no-padding',
+    <?php the_gridtop_item('col-lg-15 col-sm-3 col-xs-6 no-padding gridtop-item',
         'display-block background-size-position ratio-1-1') ?>
-    <?php the_gridtop_item('col-lg-15 col-sm-3 col-xs-6 no-padding',
+    <?php the_gridtop_item('col-lg-15 col-sm-3 col-xs-6 no-padding gridtop-item',
         'display-block background-size-position ratio-1-1') ?>
-    <?php the_gridtop_item('col-lg-15 col-sm-3 col-xs-6 no-padding',
+    <?php the_gridtop_item('col-lg-15 col-sm-3 col-xs-6 no-padding gridtop-item',
         'display-block background-size-position ratio-1-1') ?>
-    <?php the_gridtop_item('col-lg-15 col-sm-3 col-xs-6 no-padding',
+    <?php the_gridtop_item('col-lg-15 col-sm-3 col-xs-6 no-padding gridtop-item',
         'display-block background-size-position ratio-1-1') ?>
 
-    <?php the_gridtop_item('col-lg-15 col-sm-6 col-xs-6 no-padding',
+    <?php the_gridtop_item('col-lg-15 col-sm-6 col-xs-6 no-padding gridtop-item',
         'display-block background-size-position ratio-1-1 ratio-2-1-md ratio-1-1-xs') ?>
-    <?php the_gridtop_item('col-lg-15 col-sm-6 col-xs-6 no-padding',
+    <?php the_gridtop_item('col-lg-15 col-sm-6 col-xs-6 no-padding gridtop-item',
         'display-block background-size-position ratio-1-1 ratio-2-1-md ratio-1-1-xs') ?>
 
   </div>
 </div>
 
-<!-- MAIN -->
+
+    <!-- MAIN -->
 <main class="container load-more-container">
     <!-- SECTION 1: -->
     <?php
@@ -80,7 +81,7 @@ if (have_posts()):
     <!-- SECTION 6: 3 horizon -->
     <div class="row section6 section-gap">
       <div class="col-sm-4">
-          <div class="ratio-1-1" style="position: relative">
+          <div class="banner-drthanh">
               <embed style="position: absolute; top:0; left:0; width:100%; height: 100%" src="<?php echo get_template_directory_uri(); ?>/flash/PHN_350x340.swf"></embed>
           </div>
       </div>
@@ -97,6 +98,7 @@ if (have_posts()):
       if ($cont)
         $cont = $cont && the_vertical_thumbnail_row();
     ?>
+
 </main>
 
 <?php

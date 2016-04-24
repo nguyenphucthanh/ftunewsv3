@@ -37,6 +37,7 @@
 
     <?php wp_head(); ?>
 
+    <link rel="shortcut icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/images/Logo ftunews tron.png" />
     <link href="<?php echo get_template_directory_uri(); ?>/html5-boilerplate/css/bootstrap.min.css" rel="stylesheet">
     <link href="<?php echo get_template_directory_uri(); ?>/html5-boilerplate/css/font-awesome.min.css" rel="stylesheet">
 
